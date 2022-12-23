@@ -4,8 +4,6 @@ if(isset($_POST['submit'])){
     $description=$_POST['description'];
     $price=$_POST['price'];
     $categories_select=$_POST['categories'];
-
-
     $img=$_FILES['img']['name'];
     $upload='images/courses_ajout/'.$img;
     move_uploaded_file($_FILES['img']['tmp_name'],$upload);
@@ -16,12 +14,12 @@ if(isset($_POST['submit'])){
 
     if($res){
         echo "image ajouter avec succes";
-        $_SESSION['status']='inserted succesful';
-        header("location:ajouter_cours.php");
+        // $_SESSION['status']='inserted succesful';
+        // header("location:ajouter_cours.php");
     }
     else{
         echo "erreur ajout image";
-        $_SESSION['status']="not inserted";
-        header("location:ajouter_cours.php");
+        // $_SESSION['status']="not inserted";
+        // header("location:ajouter_cours.php");
     }
 }

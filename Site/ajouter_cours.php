@@ -17,12 +17,6 @@
 </head>
 </head>
 <body>
-    <?php
-        if(isset($_SESSION['status'])){
-            echo "<h4>".$_SESSION['status']."</h4>";
-            unset($_SESSION['status']);
-        }
-    ?>
     <form action="ajouter.php" method="post" enctype="multipart/form-data">
         img: 
         <input type="file" name="img">
@@ -37,7 +31,6 @@
                 <option value="JS">JS</option>
                 <option value="JQUERY">JQUERY</option>
             </select>
-
             prices:
         <input type="number" name="price">
         <input type="submit" value="ajouter" name="submit">
