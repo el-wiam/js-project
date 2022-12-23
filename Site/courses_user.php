@@ -1,6 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['user'])){
+      include("../connexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +57,28 @@
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
       </div>
-        <div class="col-lg-8" id="products"></div>
+        <div class="col-lg-8" id="products">
+          <?php
+              $req="SELECT DISTINCT(categorie),price FROM cours";
+              $res=mysqli_query($con,$req);
+              $array=[];
+              while($array=mysqli_fetch_array($res,MYSQLI_ASSOC)){
+
+                // array_push($array,$row);
+                print_r($array['categorie']);
+
+              }
+            //   while($row = mysqli_fetch_assoc($res)){
+            //     $array[] = $row;
+            //   }
+            //   foreach ($array as $key => $value) {
+            //     // $arr[3] sera mis à jour avec chaque valeur de $arr...
+            //     echo "{$key} => {$value} ";
+            //     var_dump($arr);
+            // }
+          ?>
+          
+        </div>
     </div>
 
     <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
