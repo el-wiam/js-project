@@ -88,9 +88,9 @@ let products = {
     buttons.forEach((button) => {
       //check if value equals innerText
       if (value.toUpperCase() == button.innerText.toUpperCase()) {
-        button.classList.add("active");
+        button.classList.add("active_cours");
       } else {
-        button.classList.remove("active");
+        button.classList.remove("active_cours");
       }
     });
   
@@ -100,15 +100,15 @@ let products = {
     elements.forEach((element) => {
       //display all cards on 'all' button click
       if (value == "all") {
-        element.classList.remove("hide");
+        element.classList.remove("hide_cours");
       } else {
         //Check if element contains category class
         if (element.classList.contains(value)) {
           //display element based on category
-          element.classList.remove("hide");
+          element.classList.remove("hide_cours");
         } else {
           //hide other elements
-          element.classList.add("hide");
+          element.classList.add("hide_cours");
         }
       }
     });
@@ -126,10 +126,10 @@ let products = {
       //check if text includes the search value
       if (element.innerText.includes(searchInput.toUpperCase())) {
         //display matching card
-        cards[index].classList.remove("hide");
+        cards[index].classList.remove("hide_cours");
       } else {
         //hide others
-        cards[index].classList.add("hide");
+        cards[index].classList.add("hide_cours");
       }
     });
   });
