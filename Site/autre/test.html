@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+
+<!DOCTYPE html>
+    <!-- Coding by CodingLab | www.codinglabweb.com -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<title>Responsive Card Slider</title>-->
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="swiper.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css-test.css">
+
+        <link rel="stylesheet" href="/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+                                        
+
+    </head>
+    <body>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="images/laptop.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <!-- <h2 class="name">David Dell</h2> -->
+                            <p class="description">HTML Attributes And Values</p>
+
+                            <span class="span-font">$19.9</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="images/img-1.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <!-- <h2 class="name">David Dell</h2> -->
+                            <p class="description">Manipulating Crud Using Php</p>
+
+                            <span class="span-font">$45.9</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="images/img-3.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <!-- <h2 class="name">David Dell</h2> -->
+                            <p class="description">CSS Selectors</p>
+
+                            <span class="span-font">$69.9</span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="images/img-4.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <!-- <h2 class="name">David Dell</h2> -->
+                            <p class="description">JS Coding DOM</p>
+
+                            <span class="span-font">$45.9</span>
+                        </div>
+                    </div>
+                   
+                </div>
+                </div>
+                <div class="btn-style">
+                    <button type="button" class="btn btn-danger">all courses</button>
+
+                </div>
+            </div>
+
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+
+
+        <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
+
+    </body>
+
+    <!-- Swiper JS -->
+      <!--Uncomment this line-->
+    <!--<script src="js/swiper-bundle.min.js"></script>-->
+
+    <!-- JavaScript -->
+      <!--Uncomment this line-->
+    <!--<script src="js/script.js"></script>-->
+<script src="swiper.js"></script>
+    <script>
+         
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });
+
+    </script>
+</html>
