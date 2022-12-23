@@ -219,82 +219,8 @@ h1.cours{
   padding: 5px 15px;
   background-color: rgb(223, 223, 223);
 }
-/* ========================================================================================== */
-  /* ========================================================================================== */
-  /* ========================================================================================== */
-  /* =======================================PAGE COURSES =======================================*/
 
 
-.form-group{
-  position: relative;
-}
-.form-group label{
-  display: inline-block;
-}
-.form-group i{
-  position: absolute;
-  top: 36px;
-  right: 9px;
-  visibility: hidden;
-}
-.form-group.success input{
-  border: 2px solid var(--color_succes);
-}
-.form-group.success i.fa-circle-check{
-  color: var(--color_succes);
-  visibility: visible;
-}
 
-.form-group.error input{
-  border: 2px solid var(--color_error);
-}
-.form-group.error i.fa-circle-exclamation{
-  color: var(--color_error);
-  visibility: visible;
-}
 
-.form-group.error small{
-  color: var(--color_error);
-}
-/* ========================================================================================== */
-  /* ========================================================================================== */
-  /* ========================================================================================== */
-  /* =======================================page inscription =======================================*/
-  body{
-   background-image: url("../../Site/images/back3.jpg") ;
-   background-size: cover;
-  }
-  #inscri{
-    background-color: rgba(255, 255, 255, 0.916);
-    border: 2px rgba(118, 118, 246, 0.223) solid;
-    border-radius: 20px;
-    width: 70%;
-    text-align: center;
-    margin: auto;
-    margin-top: 30px;
-  }
-  .btnn{
-    background: rgb(33, 42, 110);
-		color: rgba(255, 255, 255, 0.959);
-		border: none;
-		border-radius: 30px;
-    margin: 5px;
-  }
-  .btnn:hover{
-    background-color: rgba(81, 35, 231, 0.644);
-  }
-#form{
-  padding: 20px;
-  background-color: transparent;
-  border: 2px transparent solid;
-  border-radius: 5px;
-  box-shadow: 0 0 2em hsl(231deg 62% 94%);
-}
-.inp{
-  box-shadow: 0 0 2em hsl(231deg 62% 94%);
-}
-#titl{
-  font-family: 'Overlock',cursive;
-  font-size: bolder;
-}
 
