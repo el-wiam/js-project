@@ -267,11 +267,11 @@ h1.cours{
   #inscri{
     background-color: rgba(255, 255, 255, 0.916);
     border: 2px rgba(118, 118, 246, 0.223) solid;
-    border-radius: 20px;
+    border-radius: 4%;
     width: 70%;
     text-align: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 4%;
   }
   .btnn{
     background: rgb(33, 42, 110);
@@ -284,14 +284,13 @@ h1.cours{
     background-color: rgba(81, 35, 231, 0.644);
   }
 #form{
-  padding: 20px;
+  padding: 4%;
   background-color: transparent;
   border: 2px transparent solid;
-  border-radius: 5px;
-  box-shadow: 0 0 2em hsl(231deg 62% 94%);
+  box-shadow: 0 0 2em rgba(230, 233, 249, 0.927);
 }
 .inp{
-  box-shadow: 0 0 2em hsl(231deg 62% 94%);
+  box-shadow: 0 0 2em rgba(230, 233, 249, 0.927);
 }
 #titl{
   font-family: 'Overlock',cursive;
