@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
         // $pwd_conf_crypt= md5(md5(sha1(md5($pwd_conf))));
 
         if(!empty($name) && !empty($email) && !empty($pwd)){
-                $req="INSERT INTO `formulaire` VALUES (NULL,'$name','$email','$pwd_crypt',false)";
+                $req="INSERT INTO `formulaire` VALUES (NULL,'$name','$email','$pwd_crypt',true)";
                 $res=@mysqli_query($con,$req) or die("erreur d'ajouter");
                 echo "ajout succes";
                 header('Location: authentification.php');
