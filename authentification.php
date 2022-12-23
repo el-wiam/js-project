@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="style/css/styl.css">
     <title>LOG IN </title>
 </head>
 <body>
@@ -36,7 +36,7 @@
             </form>
         </div>
         <div class="col-lg-6 insc">
-                <img src="site/images/login.png" alt="" style="width: 500px; height:500px"> <br>
+                <img src="site/images/signup.png" alt="" style="width: 500px; height:500px"> <br>
         </div> 
         <footer style="text-align: center ; background-color:transparent;"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI & WIAM ELFARD</footer>
 </div>
