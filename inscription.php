@@ -19,7 +19,7 @@ require("connexion.php");
     
         <div class="container col-lg-6 mt-5 mb-5 formulaire">
 
-        <h1 class="text-center">Sign Up , </h1>
+        <h1 class="text-center">Sign Up,</h1>
         <form action="action.php" method="POST" class=" formwi container mt-5 " id="form" >
             <div class="form-group text-center">
                 <label for="name">Username:</label>
