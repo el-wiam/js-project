@@ -61,14 +61,21 @@
           <?php
               $req="SELECT DISTINCT(categorie),price FROM cours";
               $res=mysqli_query($con,$req);
-              while($row=mysqli_fetch_assoc($res)){
-                ?>
-                <script>
-                  
-                </script>
+              $array=[];
+              while($array=mysqli_fetch_array($res,MYSQLI_ASSOC)){
 
-                <?php
+                // array_push($array,$row);
+                print_r($array['categorie']);
+
               }
+            //   while($row = mysqli_fetch_assoc($res)){
+            //     $array[] = $row;
+            //   }
+            //   foreach ($array as $key => $value) {
+            //     // $arr[3] sera mis à jour avec chaque valeur de $arr...
+            //     echo "{$key} => {$value} ";
+            //     var_dump($arr);
+            // }
           ?>
           
         </div>
