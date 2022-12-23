@@ -1,6 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['user'])){
+      include("../connexion.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +57,21 @@
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
       </div>
-        <div class="col-lg-8" id="products"></div>
+        <div class="col-lg-8" id="products">
+          <?php
+              $req="SELECT DISTINCT(categorie),price FROM cours";
+              $res=mysqli_query($con,$req);
+              while($row=mysqli_fetch_assoc($res)){
+                ?>
+                <script>
+                  
+                </script>
+
+                <?php
+              }
+          ?>
+          
+        </div>
     </div>
 
     <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
