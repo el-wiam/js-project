@@ -36,7 +36,7 @@
             </form>
         </div>
         <div class="col-lg-6 insc">
-                <img src="site/images/signup.png" alt="" style="width: 500px; height:500px"> <br>
+                <img src="site/images/signup.png" alt="" style="width:80%; height:80%"> <br>
         </div> 
         <footer style="text-align: center ; background-color:transparent;"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI & WIAM ELFARD</footer>
 </div>
