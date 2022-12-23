@@ -12,11 +12,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="js et css/css/swiper.css">
-
-    <link rel="stylesheet" href="js et css/css/style.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="../style/css/swiper.css">
+    <link rel="stylesheet" href="../style/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -163,10 +162,10 @@
 
     <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
 
-      <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-      <script src="bootstrap/bootstrap-5.0.2-dist/js/"></script>
-      <script src="js et css/js/swiper.js"></script>
-      <script src="js et css/js/script.js"></script>
+      <script src="../bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+      <script src="../bootstrap/bootstrap-5.0.2-dist/js/"></script>
+      <script src="../style/js/swiper.js"></script>
+      <script src="../style/js/script_swiper_index.js"></script>
 </body>
 </html>
 <?php
