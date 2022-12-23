@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +17,24 @@
 </head>
 </head>
 <body>
-    <form action="ajouter.php" method="post">
-        <input type="file">
-        <input type="text">
-        <input type="number">
+    <?php
+        if(isset($_SESSION['status'])){
+            echo "<h4>".$_SESSION['status']."</h4>";
+            unset($_SESSION['status']);
+        }
+    ?>
+    <form action="ajouter.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="img">
+        <input type="text" name="description">
+        <label for="cars">Categories</label>
+            <select name="categories" id="cars">
+            <option value="HTML">HTML</option>
+            <option value="PHP">PHP</option>
+            <option value="CSS">CSS</option>
+            <option value="JS">JS</option>
+            <option value="JQUERY">JQUERY</option>
+            </select>
+        <input type="number" name="price">
         <input type="submit" value="ajouter" name="submit">
     </form>
 </body>
