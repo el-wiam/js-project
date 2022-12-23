@@ -6,10 +6,10 @@ if(isset($_POST['submit'])){
     $categories_select=$_POST['categories'];
 
     $img=$_FILES['img']['name'];
-    $upload='courses_ajout/'.$img;
+    $upload='images/courses_ajout/'.$img;
     move_uploaded_file($_FILES['img']['tmp_name'],$upload);
 
-    $req="INSERT INTO formulaire VALUES (NULL,'$categories_select','$description',$price,'$img')";
+    $req="INSERT INTO cours VALUES (NULL,'$categories_select','$description',$price,'$img')";
 
     $res=mysqli_query($con,$req);
 

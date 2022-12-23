@@ -24,16 +24,21 @@
         }
     ?>
     <form action="ajouter.php" method="post" enctype="multipart/form-data">
+        img: 
         <input type="file" name="img">
+        description:
         <input type="text" name="description">
-        <label for="cars">Categories</label>
-            <select name="categories" id="cars">
+        categories:
+        <label for="categories">Categories</label>
+            <select name="categories">
             <option value="HTML">HTML</option>
             <option value="PHP">PHP</option>
             <option value="CSS">CSS</option>
             <option value="JS">JS</option>
             <option value="JQUERY">JQUERY</option>
             </select>
+
+            prices:
         <input type="number" name="price">
         <input type="submit" value="ajouter" name="submit">
     </form>
