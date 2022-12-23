@@ -158,7 +158,7 @@
     </div>
 
 
-    <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
+    <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI & WIAM ELFARD</footer>
 
       <script src="../bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
       <script src="../bootstrap/bootstrap-5.0.2-dist/js/"></script>
