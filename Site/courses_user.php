@@ -46,10 +46,7 @@
       <div class="container row">
       <div class="col-lg-4" id="search-container">
       <input
-          type="search"
-          id="search-input"
-          placeholder="Search.."
-        />
+          type="search" id="search-input" placeholder="Search.."/>
         <button id="search">Search</button>
         <ul class="buttons">
           <li class="button-value" onclick="filterProduct('all')"> ALL</li>
