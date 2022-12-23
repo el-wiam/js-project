@@ -48,12 +48,12 @@
             <div class="col-lg-3  mt-2">
               <input class="w-100 mb-3" type="text" placeholder="search..." id="input-search">
                 <p class="text-center btn-info">Categories</p>
-                <ul class="list-group">
-                    <li class="list-group-item">ALL</li>
-                    <li class="list-group-item">JS</li>
-                    <li class="list-group-item">HTML</li>
-                    <li class="list-group-item">CSS</li>
-                    <li class="list-group-item">PHP</li>
+                <ul class="list-group buttons">
+                    <li class="list-group-item button-value">ALL</li>
+                    <li class="list-group-item button-value">JS</li>
+                    <li class="list-group-item button-value">HTML</li>
+                    <li class="list-group-item button-value">CSS</li>
+                    <li class="list-group-item button-value">PHP</li>
                   </ul>
                   <p class="text-center btn-info"> PRICE</p>
                   <input type="range" name="" id="range" >
