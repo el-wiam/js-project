@@ -7,19 +7,24 @@ if(isset($_POST['submit'])){
     $img=$_FILES['img']['name'];
     $upload='images/courses_ajout/'.$img;
     move_uploaded_file($_FILES['img']['tmp_name'],$upload);
+    // $_FILES['userfile']['tmp_name'] Le nom de fichier temporaire du fichier dans lequel le fichier téléchargé a été stocké sur le serveur.
 
     $req="INSERT INTO cours VALUES (NULL,'$categories_select','$description',$price,'$img')";
 
     $res=mysqli_query($con,$req);
 
-    if($res){
-        echo "image ajouter avec succes";
+    if($res ){
+        // if(!empty($img) && !empty($description) && !empty($categories_select) && !empty($price))
+        header("location:ajouter_cours.php");
         // $_SESSION['status']='inserted succesful';
-        // header("location:ajouter_cours.php");
     }
     else{
-        echo "erreur ajout image";
+        echo "erreur";
+        // header("location:google.com");
+        
+        // <script type="text/javascript"> alert("erreur d'ajout");window.location="ajouter_cours.php"; <script/>
+        
         // $_SESSION['status']="not inserted";
-        // header("location:ajouter_cours.php");
     }
 }
+?>

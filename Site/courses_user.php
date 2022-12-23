@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    if(isset($_SESSION['user'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,8 +82,16 @@
                           </div>
                     </div>
         </div>
+
+
+        
     </div>
 
     <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
     </body>
 </html>
+<?php
+ } 
+ else{
+    header("location:../inscription.php");
+ }
