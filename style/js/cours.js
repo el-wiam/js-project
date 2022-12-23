@@ -138,3 +138,35 @@ let products = {
   window.onload = () => {
     filterProduct("all");
   };
+
+  const debounce = (fn, delay = 500) => {
+    let timeoutId;
+    return (...args) => {
+        // cancel the previous timer
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        // setup a new timer
+        timeoutId = setTimeout(() => {
+            fn.apply(null, args)
+            console.log(args);
+        }, delay);
+    };
+};
+
+form.addEventListener('input', debounce(function (e) {
+    switch (e.target.id) {
+        case 'name':
+            checkUsername();
+            break;
+        case 'email':
+            checkEmail();
+            break;
+        case 'pwd':
+            checkPassword();
+            break;
+        case 'confirm':
+            checkConfirmPassword();
+            break;
+    }
+}));
