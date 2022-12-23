@@ -19,8 +19,8 @@ require("connexion.php");
     
         <div class="container col-lg-6 mt-5 mb-5 formulaire">
 
-        <h1 class="text-center">Sign Up</h1>
-        <form action="action.php" method="POST" class="container mt-5 " id="formwi" >
+        <h1 class="text-center">Sign Up , </h1>
+        <form action="action.php" method="POST" class=" formwi container mt-5 " id="form" >
             <div class="form-group text-center">
                 <label for="name">Username:</label>
                 <input type="text" name="username" class="form-control d-block" id="name" placeholder="Choose a Username" autocomplete="off">
