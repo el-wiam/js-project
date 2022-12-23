@@ -36,3 +36,8 @@
 .form-group.error small{
     color: var(--color_error);
 }
+#formwi{
+    border: 2px black solid;
+    background-color: red ;
+    width: 90px;
+}

@@ -14,10 +14,13 @@ require("connexion.php");
 
 </head>
 <body>
-    <div class="container col-lg-6 mt-5 mb-5 formulaire">
+    <div class="row">
+
+    
+        <div class="container col-lg-6 mt-5 mb-5 formulaire">
 
         <h1 class="text-center">Sign Up</h1>
-        <form action="action.php" method="POST" class="container mt-5" id="form" >
+        <form action="action.php" method="POST" class="container mt-5 " id="formwi" >
             <div class="form-group text-center">
                 <label for="name">Username:</label>
                 <input type="text" name="username" class="form-control d-block" id="name" placeholder="Choose a Username" autocomplete="off">
@@ -59,8 +62,12 @@ require("connexion.php");
             </div>
           </form>
     </div>
+    <div class="col-lg-6">
+            <h1>hahahahaha</h1>
+            <img src="images/laptop.png" alt="">
+    </div>
 
-
+    </div>
         <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
         <script src="script.js"></script>
 </body>
