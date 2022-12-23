@@ -61,7 +61,7 @@ require("connexion.php");
                     </form>
                 </div>
                 <div class="col-lg-6 insc">
-                        <img src="site/images/signup.png" alt="" style="width: 400px; height:400px"> <br>
+                        <img src="site/images/signup.png" alt="" style="width: 70%; height:70%"> <br>
                         <h7 class="text-center"  id="titl">this is your gateway to the land of coding <br>sign up so you can begin<br> your own journey</h7>          
                 </div> 
                 <footer style="text-align: center ; background-color:transparent;"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI & WIAM ELFARD</footer>
