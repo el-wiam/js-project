@@ -38,20 +38,28 @@
               <li class="nav-item">
                 <a class="nav-link mb-2" href="#about">About</a>
               </li>
-
+                <!-- this only shows when the admin logs in -->
               <?php
                 if(isset($_SESSION['admin'])){
                     ?>
-                    <li class="nav-item">
-                <a class="nav-link mb-2" href="ajouter_cours.php">ajouter un cours</a>
-              </li>
+                    <!-- this is a modal that enables the admin to add courses -->
+                    <!-- <button id="mybtn" onclick="show()"> ajouter un cours</button>
+                    <div class="modali" id="mymodali">
+                        <div class="modali-content">
+                            <p>Some text in the Modal..</p>
+                        </div>
+                    </div> -->
 
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="ajouter_cours.php">ajouter un cours</a>
+              </li> 
               <li class="nav-item">
                 <a class="nav-link mb-2" href="deconnexion.php">deconnexion</a>
               </li>
                     <?php
                 }
               ?>
+               <!-- ************* -->
             </ul>
           </div>
         </div>
