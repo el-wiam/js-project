@@ -48,7 +48,6 @@
           </div>
         </div>
       </nav>
-      this is the from that enables the admin to add new courses to 
     <form action="ajouter.php" method="post" enctype="multipart/form-data">
         img: 
         <input type="file" name="img">
