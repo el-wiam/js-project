@@ -12,9 +12,23 @@
     <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="">
-
     <link rel="stylesheet" href="../style/css/style.css">
-</head>
+
+    <style>
+          .button-value{
+            border:2px solid red;
+            padding: 1em 2.2em;
+            border-radius:3em;
+            background-color:transparent;
+            color:red;
+            cursor:pointer;
+          }
+.active{
+  background-color:yellow;
+  color:white;
+}
+    </style>
+  </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -46,14 +60,14 @@
       <!-- *************************************************************************** -->
       <div class="container d-flex mt-5">
             <div class="col-lg-3  mt-2">
-              <input class="w-100 mb-3" type="text" placeholder="search..." id="input-search">
+              <input class="w-100 mb-3" type="text" placeholder="search..." id="search-input">
                 <p class="text-center btn-info">Categories</p>
                 <ul class="list-group buttons">
-                    <li class="list-group-item button-value">ALL</li>
-                    <li class="list-group-item button-value">JS</li>
-                    <li class="list-group-item button-value">HTML</li>
-                    <li class="list-group-item button-value">CSS</li>
-                    <li class="list-group-item button-value">PHP</li>
+                    <button class="list-group-item button-value" onclick="filerProduct('all')"> ALL </button>
+                    <button class="list-group-item button-value" onclick="filerProduct('js')"> JS </button> 
+                    <button class="list-group-item button-value" onclick="filerProduct('html')"> HTML </button> 
+                    <button class="list-group-item button-value" onclick="filerProduct('css')"> CSS </button> 
+                    <button class="list-group-item button-value" onclick="filerProduct('php')"> PHP </button> 
                   </ul>
                   <p class="text-center btn-info"> PRICE</p>
                   <input type="range" name="" id="range" >
@@ -88,7 +102,8 @@
     </div>
 
     <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
-    </body>
+  <script src="test_script.js"></script>  
+  </body>
 </html>
 <?php
  } 
