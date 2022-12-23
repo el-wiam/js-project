@@ -10,7 +10,7 @@ require("connexion.php");
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/css/style.css">
 
 </head>
 <body>
@@ -62,6 +62,6 @@ require("connexion.php");
 
 
         <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
+        <script src="style/js/script.js"></script>
 </body>
 </html>

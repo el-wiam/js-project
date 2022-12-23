@@ -1,0 +1,261 @@
+/* Google Fonts - Poppins */
+
+:root {
+  --color_first:#1ec36dd9;
+  --color_second:#f0f0f0;
+  --color_succes:#2ecc71;
+  --color_error: #e74c3c;
+  --white: #ffffff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.test{
+    max-width: 100%;
+    height: 500px;
+    background-image: url("../../Site/images/laptop.png");
+    background-position: center;
+}
+.block{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+h2{
+    font-family: 'Overlock', cursive;
+    font-weight: bold;
+}
+h4{
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+}
+.test-filter{
+    width: 90%;
+    max-height: 70%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius:10px ;
+    margin: auto;
+}
+.btn-style{
+    background-color: rgb(211, 139, 4);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(198, 198, 198);
+}
+
+
+#slash{
+    color: rgb(211, 139, 4);
+    font-weight: bold;
+}
+
+h1.cours{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*  ======================================================================================          =========================================== */
+
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: #4070F4; */
+    border-radius: 25px 25px 0 25px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    /* background-color: #4070F4; */
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+  }
+  .card-image{
+    position: relative;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    /* background: #FFF; */
+    padding: 3px;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px #aaaaaa;
+  }
+  .card-image{
+      height: 250px;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  .description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+  }
+  
+  .swiper-navBtn{
+    /* color: #6E93f7; */
+    color: rgb(211, 139, 4);
+    transition: color 0.3s ease;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 70px;
+    top: 144%;
+  }
+  .swiper-button-prev{
+    left: 70px;
+    top:  144%;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+   
+  .span-font{
+      padding: 10px;
+      font-weight: bold;
+  }
+  
+  .btn-style-all{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .btn-style-all a{
+      background-color: rgb(211, 139, 4);
+      margin-top: 20px;
+      padding: 10px 20px;
+  }
+  
+  footer{
+      font-weight: lighter;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rgb(223, 223, 223);
+      padding: 10px;
+  }
+
+
+  /* ========================================================================================== */
+  /* ========================================================================================== */
+  /* ========================================================================================== */
+  /* =======================================PAGE COURSES =======================================*/
+
+.list-style li{
+  border: none;
+  color: rgb(0, 0, 0,0.5);
+  font-family:Arial, Helvetica, sans-serif;
+}
+.p-style{
+  margin-left: 10px;
+}
+.card{
+  padding: 10px;
+  border: none;
+
+}
+.card-img-top{
+  box-shadow: 5px 5px 10px #aaaaaa;
+}
+
+#range{
+  width: 100%;
+}
+#input-search{
+  border: none;
+  padding: 5px 15px;
+  background-color: rgb(223, 223, 223);
+}
+
+
+
+/* ========================================================================================== */
+  /* ========================================================================================== */
+  /* ========================================================================================== */
+  /* =======================================PAGE COURSES =======================================*/
+
+
+.form-group{
+  position: relative;
+}
+.form-group label{
+  display: inline-block;
+}
+.form-group i{
+  position: absolute;
+  top: 36px;
+  right: 9px;
+  visibility: hidden;
+}
+.form-group.success input{
+  border: 2px solid var(--color_succes);
+}
+.form-group.success i.fa-circle-check{
+  color: var(--color_succes);
+  visibility: visible;
+}
+
+.form-group.error input{
+  border: 2px solid var(--color_error);
+}
+.form-group.error i.fa-circle-exclamation{
+  color: var(--color_error);
+  visibility: visible;
+}
+
+.form-group.error small{
+  color: var(--color_error);
+}

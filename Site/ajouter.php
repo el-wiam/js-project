@@ -5,6 +5,7 @@ if(isset($_POST['submit'])){
     $price=$_POST['price'];
     $categories_select=$_POST['categories'];
 
+
     $img=$_FILES['img']['name'];
     $upload='images/courses_ajout/'.$img;
     move_uploaded_file($_FILES['img']['tmp_name'],$upload);
