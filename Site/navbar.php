@@ -29,12 +29,13 @@
                 <a class="nav-link mb-2" href="ajouter_cours.php">ajouter un cours</a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link mb-2" href="deconnexion.php">deconnexion</a>
-              </li>
+              
                     <?php
                 }
               ?>
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="deconnexion.php">deconnexion</a>
+              </li>
             </ul>
           </div>
         </div>
