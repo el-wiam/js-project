@@ -65,12 +65,12 @@ img {
   display: none;
 }
 @media screen and (max-width: 720px) {
-  img {
+  img{
     max-width: 100%;
     object-fit: contain;
     height: 10em;
   }
-  .card {
+  .card{
     max-width: 10em;
     margin-top: 1em;
   }
