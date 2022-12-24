@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ajouter un cours</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="../swiper.css">
@@ -25,26 +25,27 @@
                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav text-center ms-5 ">
-                    <li class="nav-item">
-                      <a class="nav-link active mb-2" aria-current="page" href="home_user.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mb-2" href="courses_user.php">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mb-2" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mb-2" href="ajouter_cours.php">ajouter un cours</a>
-                    </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link mb-2" href="deconnexion.php">deconnexion</a>
-                    </li>
-              </ul>
-            </div>
+           <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-center ms-5 ">
+              <li class="nav-item">
+                <a class="nav-link active mb-2" aria-current="page" href="home_user.php">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="courses_user.php">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="ajouter_cours.php">ajouter un cours</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link mb-2" href="deconnexion.php">deconnexion</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     <form action="ajouter.php" method="post" enctype="multipart/form-data">

@@ -5,50 +5,57 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
+<?php
+  include("head.php");
+?>
     <link rel="stylesheet" href="../style/css/cours.css">
-    <link rel="stylesheet" href="../style/css/style.css">
-  </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand ms-5" href="home_user.php">
-                <img src="images/logo_emsi.png" alt="" width="200" height="45">
-              </a>
-                 <!-- Fach kansaghro la fenetre wla f telephone ghadi tla3 dik l3iba dyal l menu f jenb -->
-                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-        
-                  <!-- ****************************************** -->
-           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav text-center ms-5 ">
-              <li class="nav-item">
-                <a class="nav-link active mb-2" aria-current="page" href="home_user.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-2" href="courses_user.php">Courses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-2" href="#">About</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <?php
+  include("navbar.php");
+  ?>
 
       <!-- *************************************************************************** -->
       <div class="container row">
       <div class="col-lg-4" id="search-container">
       <input
           type="search" id="search-input" placeholder="Search.."/>
-        <button id="search">Search</button>
+        <button id="search" >Search</button>
+        <?php
+                if(isset($_SESSION['admin'])){
+                    ?>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php
+                }
+              ?>
         <ul class="buttons">
           <li class="button-value" onclick="filterProduct('all')"> ALL</li>
           <li class="button-value" onclick="filterProduct('JS')">JS</li>
@@ -58,16 +65,15 @@
         </ul>
       </div>
         <div class="col-lg-8" id="products">
-          <?php
-              $req="SELECT DISTINCT(categorie),price FROM cours";
-              $res=mysqli_query($con,$req);
-              $array=[];
-              while($array=mysqli_fetch_array($res,MYSQLI_ASSOC)){
-
-                // array_push($array,$row);
-                print_r($array['categorie']);
-
-              }
+              <!-- // $req="SELECT * FROM cours";
+              // $res=mysqli_query($con,$req);
+              
+              // while($array=mysqli_fetch_assoc($res)){
+              //   print_r($array);
+              // }
+              // for($i=0;count($array);$i++){
+              //   print_r($array[$i]);
+              // }
             //   while($row = mysqli_fetch_assoc($res)){
             //     $array[] = $row;
             //   }
@@ -75,15 +81,125 @@
             //     // $arr[3] sera mis à jour avec chaque valeur de $arr...
             //     echo "{$key} => {$value} ";
             //     var_dump($arr);
-            // }
-          ?>
+            // } -->
+          
           
         </div>
     </div>
 
-    <footer style="text-align: center"> Copyright &copy; <script>document.write(new Date().getFullYear())</script> SAFAA BATRAHI</footer>
-  <script src="../style/js/cours.js"></script>  
+  <?php
+    include("footer.php");
+
+  ?> 
+  <script>
+
+let products = {
+    data: [
+      <?php
+    $req = "select * from cours";
+$res = mysqli_query($con, $req);
+  while ($row = mysqli_fetch_assoc($res)) {
+    echo ("{
+      productName: \"" . $row['description'] . "\",
+      category: \"" . $row['categorie'] . "\",
+      price: \"" . $row['price'] . "\",
+      image: \"" . $row['img'] . "\",
+    },");
+  }
+  ?> 
+    ],
+  };
+  for (let i of products.data) {
+    //Create Card
+    let card = document.createElement("div");
+    //Card should have category and should stay hidden initially
+    card.classList.add("card", i.category, "hide");
+    //image div
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("image-container");
+    //img tag
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    imgContainer.appendChild(image);
+    card.appendChild(imgContainer);
+    //container
+    let container = document.createElement("div");
+    container.classList.add("container");
+    //product name
+    let name = document.createElement("h5");
+    name.classList.add("product-name");
+    name.innerText = i.productName.toUpperCase();
+    container.appendChild(name);
+    //price
+    let price = document.createElement("h6");
+    price.innerText = "$" + i.price;
+    container.appendChild(price);
+  
+    card.appendChild(container);
+    document.getElementById("products").appendChild(card);
+  }
+  
+  //parameter passed from button (Parameter same as category)
+  function filterProduct(value) {
+    //Button class code
+    let buttons = document.querySelectorAll(".button-value");
+    buttons.forEach((button) => {
+      //check if value equals innerText
+      if (value.toUpperCase() == button.innerText.toUpperCase()) {
+        button.classList.add("active_cours");
+      } else {
+        button.classList.remove("active_cours");
+      }
+    });
+  
+    //select all cards
+    let elements = document.querySelectorAll(".card");
+    //loop through all cards
+    elements.forEach((element) => {
+      //display all cards on 'all' button click
+      if (value == "all") {
+        element.classList.remove("hide_cours");
+      } else {
+        //Check if element contains category class
+        if (element.classList.contains(value)) {
+          //display element based on category
+          element.classList.remove("hide_cours");
+        } else {
+          //hide other elements
+          element.classList.add("hide_cours");
+        }
+      }
+    });
+  }
+  
+  //Search button click
+  document.getElementById("search").addEventListener("click", () => {
+    //initializations
+    let searchInput = document.getElementById("search-input").value;
+    let elements = document.querySelectorAll(".product-name");
+    let cards = document.querySelectorAll(".card");
+  
+    //loop through all elements
+    elements.forEach((element, index) => {
+      //check if text includes the search value
+      if (element.innerText.includes(searchInput.toUpperCase())) {
+        //display matching card
+        cards[index].classList.remove("hide_cours");
+      } else {
+        //hide others
+        cards[index].classList.add("hide_cours");
+      }
+    });
+  });
+  
+  //Initially display all products
+  window.onload = () => {
+    filterProduct("all");
+  };
+  </script>
+<!-- <script src="../style/js/cours.js"></script>  -->
   </body>
+
 </html>
 <?php
  } 
