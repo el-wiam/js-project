@@ -1,39 +1,41 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="../swiper.css">
-
-    <link rel="stylesheet" href="../style.css">
-</head>
-</head>
+<?php
+    include("head.php");
+?>
 <body>
-    <form action="ajouter.php" method="post" enctype="multipart/form-data">
-        img: 
-        <input type="file" name="img">
-        description:
-        <input type="text" name="description">
-        categories:
-        <label for="categories">Categories</label>
-            <select name="categories">
-                <option value="HTML">HTML</option>
-                <option value="PHP">PHP</option>
-                <option value="CSS">CSS</option>
-                <option value="JS">JS</option>
-                <option value="JQUERY">JQUERY</option>
-            </select>
-            prices:
-        <input type="number" name="price">
-        <input type="submit" value="ajouter" name="submit">
-    </form>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+<?php
+    include("footer.php");
+?>
 </body>
 </html>

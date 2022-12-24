@@ -21,18 +21,6 @@
               <li class="nav-item">
                 <a class="nav-link mb-2" href="#about">About</a>
               </li>
-
-              <?php
-                if(isset($_SESSION['admin'])){
-                    ?>
-                    <li class="nav-item">
-                <a class="nav-link mb-2" href="ajouter_cours.php">ajouter un cours</a>
-              </li>
-
-              
-                    <?php
-                }
-              ?>
               <li class="nav-item">
                 <a class="nav-link mb-2" href="deconnexion.php">deconnexion</a>
               </li>
