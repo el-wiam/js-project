@@ -16,7 +16,7 @@
                 <a class="nav-link active mb-2" aria-current="page" href="home_user.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link mb-2" href="courses_user.php">Courses</a>
+                <a class="nav-link mb-2" href="test_courses.php">Courses</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link mb-2" href="#about">About</a>

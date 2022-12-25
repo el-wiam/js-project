@@ -18,30 +18,15 @@ function isBetween(length,min,max){
 
 
 function showError(input,message){
-    // get the form-field element
     const formField = input.parentElement;
-    console.log(formField);
-    // add the error class
     formField.className="form-group text-center error";
-    // formField.classList.remove('success');
-    // formField.classList.add('error');
-
-    // show the error message
     const error = formField.querySelector('small');
     error.textContent = message;
 }
 
 function showSuccess(input){
-// get the form-field element
 const formField = input.parentElement;
-
-// remove the error class
 formField.className="form-group text-center success";
-
-// formField.classList.remove('error');
-// formField.classList.add('success');
-
-// hide the error message
 const error = formField.querySelector('small');
 error.textContent = '';
 }
@@ -63,7 +48,7 @@ function checkUsername(){
     } else {
         showSuccess(userName);
         valid = true;
-    }// const isBetween = (length, min, max) => length < min || length > max ? false : true;
+    }
 
     return valid;
 }

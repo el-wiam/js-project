@@ -15,48 +15,28 @@
   include("navbar.php");
   ?>
 
-      <!-- *************************************************************************** -->
-      <div class="container row">
-      <div class="col-lg-4" id="search-container">
-      <input
-          type="search" id="search-input" placeholder="Search.."/>
-        <button id="search" >Search</button>
-        <ul class="buttons">
-          <li class="button-value" onclick="filterProduct('all')"> ALL</li>
-          <li class="button-value" onclick="filterProduct('JS')">JS</li>
-          <li class="button-value" onclick="filterProduct('PHP')">PHP</li>
-          <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
-          <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
-        </ul>
-      </div>
-        <div class="col-lg-8" id="products">
-              <!-- // $req="SELECT * FROM cours";
-              // $res=mysqli_query($con,$req);
-              
-              // while($array=mysqli_fetch_assoc($res)){
-              //   print_r($array);
-              // }
-              // for($i=0;count($array);$i++){
-              //   print_r($array[$i]);
-              // }
-            //   while($row = mysqli_fetch_assoc($res)){
-            //     $array[] = $row;
-            //   }
-            //   foreach ($array as $key => $value) {
-            //     // $arr[3] sera mis à jour avec chaque valeur de $arr...
-            //     echo "{$key} => {$value} ";
-            //     var_dump($arr);
-            // } -->
-          
-          
+        <div class="container m-auto w-100">
+            <div class="row">
+                <div class="col-lg-3 col-md-5 col-sm-4 " >
+                        <input type="text" placeholder="Search...">
+                        <ul class="buttons">
+                                <li class="button-value" onclick="filterProduct('all')"> ALL</li>
+                                <li class="button-value" onclick="filterProduct('JS')">JS</li>
+                                <li class="button-value" onclick="filterProduct('PHP')">PHP</li>
+                                <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
+                                <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
+                        </ul>
+                        <input type="range" min="0" max="100" value="0" oninput="document.getElementById('AfficheRange').textContent=value" />
+                        <span id="AfficheRange">0</span>
+                </div>
+                <div class="row col-9 d-flex text-center justify-content-evenly " id="products"></div>
+            </div>
         </div>
-    </div>
-
-  <?php
+        <?php
     include("footer.php");
 
   ?> 
-  <script>
+        <script>
 
 let products = {
     data: [
@@ -77,6 +57,9 @@ $res = mysqli_query($con, $req);
   for (let i of products.data) {
     //Create Card
     let card = document.createElement("div");
+    card.classList.add("col-md-3");
+    card.classList.add("col-sm-2");
+
     //Card should have category and should stay hidden initially
     card.classList.add("card", i.category, "hide");
     //image div
