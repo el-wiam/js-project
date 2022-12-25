@@ -1,6 +1,5 @@
 <?php
 
-
 include("connexion.php");
 if(isset($_POST['submit'])){
                 $name=$_POST['con_user'];
