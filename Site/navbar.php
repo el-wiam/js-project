@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light " id="navstyl">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container-fluid row" >
             <a class=" col-4 navbar-brand ms-5" href="home_user.php">
                 <h3 class="titl" >  Welcome back </h3>

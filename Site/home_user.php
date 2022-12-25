@@ -102,7 +102,7 @@
             </div>
             </div>
             <div class="btn-style-all">
-                <a href="courses_user.php" type="button" class="btn btn-danger">all courses</a>
+                <a href="courses_user.php" type="button" class="btn ">all courses</a>
 
             </div>
         </div>

@@ -59,14 +59,9 @@ body{
   
 }
 .titl{
-  color: #1b2c3f;
+  /* color: #1b2c3f; */
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: bolder;
-}
-#navstyl{
-  background-color: transparent !important;
-  border-color: transparent;
-
 }
 #itemstyl{
   font-family: Georgia, 'Times New Roman', Times, serif;
