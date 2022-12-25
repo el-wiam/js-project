@@ -54,7 +54,7 @@ require("connexion.php");
                         </div>
                 
                         <div class=" row mt-3">
-                            <button  type="submit" id="myBtn " name="submit" class="col-5 btn btn-success  btn-block btnn"> Sign UP</button>
+                            <button  type="submit" id="myBtn " name="submit" class="col-5 btn btn-success btn-block btnn "> Sign UP</button>
                         </div>
                     </form>
                 </div>

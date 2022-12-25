@@ -15,7 +15,7 @@ body{
   #inscri{
     /* background-color: rgb(252, 233, 209);
     border: 2px bisque solid; */
-    box-shadow: 0 0 2em rgba(160, 160, 162, 0.927);
+    box-shadow: 0 0 2em rgba(217, 217, 227, 0.927);
     border-radius: 2%;
     width: 80%;
     text-align: center;
@@ -24,7 +24,7 @@ body{
   }
   .btnn{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background: #243b55;
+    background: #bba190;
 		color: rgba(255, 255, 255, 0.959);
 		border: none;
 		border-radius: 30px;
@@ -34,23 +34,24 @@ body{
   .btnnl{
     font-family:Georgia, 'Times New Roman', Times, serif;
     border: #f6f5f7 2px solid;
-    background:#243b55;
+    background:#bba190;
     color: #f6f5f7;
     border-radius: 30px;
   }
   .btnn:hover{
     border: #f6f5f7 2px solid;
-    background:#243b55;
+    background:#e4d7cf;
   }
   .btnnl:hover{
-    background-color: #f6f5f7;
+    background-color: #e4d7cf;
   }
   .insc{
-    border-radius: 2%;
+    border-radius: 0 2%  2% 0  ;
     padding-top: 15%;
     padding-bottom: 10%;
-    color: #f6f5f7;
-    background-color: #243b55;
+    color: black;
+    border: 1px solid #e4d7cf ;
+    background-color: #f2ebe7;
   }
 #form{
   padding: 4%;
@@ -93,4 +94,10 @@ body{
   
   .form-group.error small{
     color: var(--color_error);
+  }
+  .form-group input{
+    background-color: #f2ebe7;
+  }
+  .form-group input:focus{
+    background-color: #f2ebe7;
   }
