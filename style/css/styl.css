@@ -59,8 +59,23 @@ body{
   
 }
 .titl{
+  color: #1b2c3f;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: bolder;
+}
+#navstyl{
+  background-color: transparent !important;
+  border-color: transparent;
+
+}
+#itemstyl{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:20px; 
+  color:#395c84; 
+}
+#itemstyl:hover{
+  color:#1b2c3f; ;
+  border-bottom: 1px solid #243b55;
 }
 
 .form-group{
