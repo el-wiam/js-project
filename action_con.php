@@ -17,6 +17,7 @@ if(isset($_POST['submit'])){
                 if(!empty($row = mysqli_fetch_assoc($res))) {
                     session_start();
                     $_SESSION['user']=true;
+                    $_SESSION['username']=$row['username'];
                         if($row['admin']==true){
                             $_SESSION['admin'] = true;
                         }
