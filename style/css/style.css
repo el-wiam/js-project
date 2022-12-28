@@ -1,19 +1,19 @@
 /* Google Fonts - Poppins */
 
-:root {
+/* :root {
   --color_first:#1ec36dd9;
   --color_second:#f0f0f0;
   --color_succes:#2ecc71;
   --color_error: #e74c3c;
   --white: #ffffff;
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+} */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); */
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .test{
     max-width: 100%;
@@ -45,16 +45,16 @@ h4{
     margin: auto;
 }
 .btn-style{
-    background-color: rgb(211, 139, 4);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 2px solid rgb(198, 198, 198);
+    background-color: #395c84;;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid #243b55;
 }
 
 
 #slash{
-    color: rgb(211, 139, 4);
-    font-weight: bold;
+    color: #395c84;
+    font-weight:bolder;
 }
 
 h1.cours{
@@ -139,7 +139,7 @@ h1.cours{
   
   .swiper-navBtn{
     /* color: #6E93f7; */
-    color: rgb(211, 139, 4);
+    color: #395c84;
     transition: color 0.3s ease;
   }
   .swiper-navBtn::before,
@@ -176,7 +176,8 @@ h1.cours{
       justify-content: center;
   }
   .btn-style-all a{
-      background-color: rgb(211, 139, 4);
+      background-color: #395c84;
+      color: #FFF;
       margin-top: 20px;
       padding: 10px 20px;
   }
@@ -184,7 +185,7 @@ h1.cours{
   footer{
       font-weight: lighter;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: rgb(223, 223, 223);
+      background-color: rgb(241, 239, 239);
       padding: 10px;
   }
 
