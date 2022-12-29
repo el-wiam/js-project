@@ -104,8 +104,8 @@ $res = mysqli_query($con, $req);
     document.getElementById("products").appendChild(card);
   }
   
-  //parameter passed from button (Parameter same as category)
-  function filterProduct(value) {
+    //parameter passed from button (Parameter same as category)
+    function filterProduct(value) {
     //Button class code
     let buttons = document.querySelectorAll(".button-value");
     buttons.forEach((button) => {
