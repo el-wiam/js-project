@@ -20,53 +20,19 @@
       <div class="col-lg-4 " id="search-container">
           <input type="search" id="search-input" placeholder="Search.."/>
 
-            <ul class="items-body-content">
-              <li class="" onclick="filterProduct('all')"><span>ALL</span>     <i class="fa fa-angle-right ml-5"></i></li>
-              <li class="" onclick="filterProduct('JS')"> <span>JS</span>    <i class="fa fa-angle-right"></i></li>
-              <li class="" onclick="filterProduct('PHP')">  <span>PHP</span>   <i class="fa fa-angle-right"></i></li>
-              <li class="" onclick="filterProduct('CSS')"> <span>CSS </span>   <i class="fa fa-angle-right"></i></li>
-              <li class="" onclick="filterProduct('HTML')"> <span>HTML </span> <i class="fa fa-angle-right"></i></li>
-            </ul>
-
-            <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-            <output id="value_range">24</output>
-
-             <?php
-                if(isset($_SESSION['admin'])){
-                    ?>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="mb-3">
-                                  <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                  <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="mb-3">
-                                  <label for="message-text" class="col-form-label">Message:</label>
-                                  <textarea class="form-control" id="message-text"></textarea>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Send message</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-              <?php
-                }
-              ?>
-        
-     
+        <ul class="items-body-content">
+          <li class="fa fa-angle-right" onclick="filterProduct('all')"> ALL</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('JS')">JS</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('PHP')">PHP</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('CSS')">CSS</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('HTML')">HTML</li>
+        </ul>
+        <?php
+        $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
+        $row=mysqli_fetch_assoc($res_0);
+        ?>
+        <input type="range" value="24" min="1" max="<?=$row['max']?>" oninput="this.nextElementSibling.value = this.value">
+        <output id="value_range">24</output>
       </div>
         <div class="col-lg-8" id="products">          
         </div>
