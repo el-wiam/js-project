@@ -20,12 +20,12 @@
       <div class="col-lg-4" id="search-container">
       <input type="search" id="search-input" placeholder="Search.."/>
 
-        <ul class="buttons">
-          <li class="button-value" onclick="filterProduct('all')"> ALL</li>
-          <li class="button-value" onclick="filterProduct('JS')">JS</li>
-          <li class="button-value" onclick="filterProduct('PHP')">PHP</li>
-          <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
-          <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
+        <ul class="items-body-content">
+          <li class="fa fa-angle-right" onclick="filterProduct('all')"> ALL</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('JS')">JS</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('PHP')">PHP</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('CSS')">CSS</li>
+          <li class="fa fa-angle-right" onclick="filterProduct('HTML')">HTML</li>
         </ul>
         <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
         <output id="value_range">24</output>
