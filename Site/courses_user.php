@@ -9,15 +9,15 @@
 
       <!-- *************************************************************************** -->
       <div class="container row">
-      <div class="col-lg-4" id="search-container">
-      <input type="search" id="search-input" placeholder="Search.."/>
+      <div class="col-lg-4 " id="search-container">
+          <input type="search" id="search-input" placeholder="Search.."/>
 
         <ul class="items-body-content">
-          <li class="fa fa-angle-right" onclick="filterProduct('all')"> ALL</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('JS')">JS</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('PHP')">PHP</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('CSS')">CSS</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('HTML')">HTML</li>
+          <li class="" onclick="filterProduct('all')"> <span>All</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('JS')"><span>JS</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('PHP')"><span>PHP</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('CSS')"><span>CSS</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('HTML')"><span>HTML</span> <i class="fa fa-angle-right"></i></li>
         </ul>
         <?php
           $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
@@ -72,20 +72,14 @@ $res = mysqli_query($con, $req);
     container.appendChild(name);
     //price
     let d= document.createElement("div");
-    d.style.display="flex";
     let price = document.createElement("h6");
     price.innerText = i.price;
-    let span = document.createElement("span");
-    span.innerText = "$";
-    d.append(span);
     d.append(price);
     container.appendChild(d);
   
     card.appendChild(container);
     document.getElementById("products").appendChild(card);
   }
-  var elements = document.querySelectorAll(".card");
-
   
     //parameter passed from button (Parameter same as category)
     function filterProduct(value) {
@@ -101,6 +95,7 @@ $res = mysqli_query($con, $req);
     });
   
     //select all cards
+    var elements = document.querySelectorAll(".card");
     //loop through all cards
     elements.forEach((element) => {
       //display all cards on 'all' button click
@@ -147,7 +142,9 @@ $res = mysqli_query($con, $req);
   var elem = document.querySelector('input[type="range"]');
 
 var rangeValue = function(){
-  elements.forEach((element)=>{
+    var elts = document.querySelectorAll(".card");
+  //   console.log(elts);
+  elts.forEach((element)=>{
       element.childNodes.forEach((el)=>{
           el.childNodes.forEach((e)=>{
               e.childNodes.forEach((e2)=>{
