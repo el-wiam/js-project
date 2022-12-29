@@ -3,6 +3,7 @@ body{
 }
 #search-container {
   margin: 1em 0;
+  background-color: green;
 }
 #search-container input {
   background-color: transparent;
@@ -18,7 +19,7 @@ body{
 #search-container button {
   padding: 1em 2em;
   margin-left: 4em;
-  background-color: #6759ff;
+  /* background-color: #6759ff; */
   color: black;
   border-radius: 5px;
   margin-top: 0.5em;
