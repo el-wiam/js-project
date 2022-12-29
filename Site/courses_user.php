@@ -22,9 +22,8 @@
       <!-- *************************************************************************** -->
       <div class="container row">
       <div class="col-lg-4" id="search-container">
-        <!-- <div id="search-input"></div> -->
-      <!-- <input type="search" id="search-input" placeholder="Search.."/> -->
-        <!-- <button id="search" >Search</button> -->
+      <input type="search" id="search-input" placeholder="Search.."/>
+
         <ul class="buttons">
           <li class="button-value" onclick="filterProduct('all')"> ALL</li>
           <li class="button-value" onclick="filterProduct('JS')">JS</li>
@@ -35,29 +34,10 @@
         
         
         <!-- <input type="range" value="24" min="1" max="100"> -->
-        <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-        <output id="value_range">24</output>
+        <!-- <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <output id="value_range">24</output> -->
       </div>
-        <div class="col-lg-8" id="products">
-              <!-- // $req="SELECT * FROM cours";
-              // $res=mysqli_query($con,$req);
-              
-              // while($array=mysqli_fetch_assoc($res)){
-              //   print_r($array);
-              // }
-              // for($i=0;count($array);$i++){
-              //   print_r($array[$i]);
-              // }
-            //   while($row = mysqli_fetch_assoc($res)){
-            //     $array[] = $row;
-            //   }
-            //   foreach ($array as $key => $value) {
-            //     // $arr[3] sera mis à jour avec chaque valeur de $arr...
-            //     echo "{$key} => {$value} ";
-            //     var_dump($arr);
-            // } -->
-          
-          
+        <div class="col-lg-8" id="products">          
         </div>
     </div>
 
@@ -129,7 +109,7 @@ $res = mysqli_query($con, $req);
     });
   
     //select all cards
-    let elements = document.querySelectorAll(".card");
+    var elements = document.querySelectorAll(".card");
     //loop through all cards
     elements.forEach((element) => {
       //display all cards on 'all' button click
@@ -149,86 +129,34 @@ $res = mysqli_query($con, $req);
   }
 
 
-  // var elem = document.querySelector('input[type="range"]');
-
-
-  // var rangeValue = function(){
-  //     // var elts = document.querySelectorAll(".card");
-
-  //     elements.forEach((element)=>{
-  //       element.childNodes.forEach((el)=>{
-  //           el.childNodes.forEach((e)=>{
-  //             console.log(e);
-  //               e.childNodes.forEach((e2)=>{
-  //                   if(e2.textContent<elem.value){
-  //                       element.classList.remove("hide_cours");
-  //                   }
-  //                   else{
-  //                       element.classList.add("hide_cours");
-  //                   }
-  //               })
-  //           })
-  //       })
-  //     });
-  //   }
-
-  //       elem.addEventListener("input", rangeValue);
-
-
-  var rangeValue = function(){
-      var elts = document.querySelectorAll(".card");
-    //   console.log(elts);
-    elts.forEach((element)=>{
-        element.childNodes.forEach((el)=>{
-            el.childNodes.forEach((e)=>{
-                e.childNodes.forEach((e2)=>{
-                    e2.childNodes.forEach((e3)=>{
-                        // console.log(e3);
-                        if(e3.textContent<elem.value){
-                            element.classList.remove("hide_cours");
-                        }
-                        else{
-                            element.classList.add("hide_cours");
-                        }
-                    });
-                })
-            })
-        })
-      });
-    }
-
-        elem.addEventListener("input", rangeValue);
 
 
 
-
+ //Search button click
+  document.getElementById("search-input").addEventListener("keyup", () => {
+    //initializations
+    let searchInput = document.getElementById("search-input").value;
+    let elements = document.querySelectorAll(".product-name");
+    let cards = document.querySelectorAll(".card");
   
-  // //Search button click
-  // document.getElementById("search-input").addEventListener("keyup", () => {
-  //   //initializations
-  //   let searchInput = document.getElementById("search-input").value;
-  //   let elements = document.querySelectorAll(".product-name");
-  //   let cards = document.querySelectorAll(".card");
+    //loop through all elements
+    elements.forEach((element, index) => {
+      //check if text includes the search value
+      if (element.innerText.includes(searchInput.toUpperCase())) {
+        //display matching card
+        cards[index].classList.remove("hide_cours");
+      } else {
+        //hide others
+        cards[index].classList.add("hide_cours");
+      }
+    });
+  });
   
-  //   //loop through all elements
-  //   elements.forEach((element, index) => {
-  //     //check if text includes the search value
-  //     if (element.innerText.includes(searchInput.toUpperCase())) {
-  //       //display matching card
-  //       cards[index].classList.remove("hide_cours");
-  //     } else {
-  //       //hide others
-  //       cards[index].classList.add("hide_cours");
-  //     }
-  //   });
-  // });
-  
-  //Initially display all products
+
   window.onload = () => {
     filterProduct("all");
   };
   </script>
-<!-- <script src="../style/js/cours.js"></script>  -->
   </body>
 
 </html>
