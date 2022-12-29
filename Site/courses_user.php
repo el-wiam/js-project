@@ -9,7 +9,11 @@
   include("head.php");
 ?>
     <link rel="stylesheet" href="../style/css/cours.css">
-
+<style>
+      .hide_cours {
+  display: none;
+}
+</style>
 <body>
   <?php
   include("navbar.php");
@@ -19,7 +23,7 @@
       <div class="container row">
       <div class="col-lg-4" id="search-container">
         <!-- <div id="search-input"></div> -->
-      <input type="search" id="search-input" placeholder="Search.."/>
+      <!-- <input type="search" id="search-input" placeholder="Search.."/> -->
         <!-- <button id="search" >Search</button> -->
         <ul class="buttons">
           <li class="button-value" onclick="filterProduct('all')"> ALL</li>
@@ -28,9 +32,11 @@
           <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
-
-        <!-- <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-        <output id="value_range">24</output> -->
+        
+        
+        <!-- <input type="range" value="24" min="1" max="100"> -->
+        <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <output id="value_range">24</output>
       </div>
         <div class="col-lg-8" id="products">
               <!-- // $req="SELECT * FROM cours";
@@ -99,9 +105,11 @@ $res = mysqli_query($con, $req);
     name.innerText = i.productName.toUpperCase();
     container.appendChild(name);
     //price
+    let d= document.createElement("div");
     let price = document.createElement("h6");
-    price.innerText = "$" + i.price;
-    container.appendChild(price);
+    price.innerText = i.price;
+    d.append(price);
+    container.appendChild(d);
   
     card.appendChild(container);
     document.getElementById("products").appendChild(card);
@@ -167,31 +175,53 @@ $res = mysqli_query($con, $req);
   //       elem.addEventListener("input", rangeValue);
 
 
+  var rangeValue = function(){
+      var elts = document.querySelectorAll(".card");
+    //   console.log(elts);
+    elts.forEach((element)=>{
+        element.childNodes.forEach((el)=>{
+            el.childNodes.forEach((e)=>{
+                e.childNodes.forEach((e2)=>{
+                    e2.childNodes.forEach((e3)=>{
+                        // console.log(e3);
+                        if(e3.textContent<elem.value){
+                            element.classList.remove("hide_cours");
+                        }
+                        else{
+                            element.classList.add("hide_cours");
+                        }
+                    });
+                })
+            })
+        })
+      });
+    }
 
+        elem.addEventListener("input", rangeValue);
 
 
 
 
   
-  //Search button click
-  document.getElementById("search-input").addEventListener("keyup", () => {
-    //initializations
-    let searchInput = document.getElementById("search-input").value;
-    let elements = document.querySelectorAll(".product-name");
-    let cards = document.querySelectorAll(".card");
+  // //Search button click
+  // document.getElementById("search-input").addEventListener("keyup", () => {
+  //   //initializations
+  //   let searchInput = document.getElementById("search-input").value;
+  //   let elements = document.querySelectorAll(".product-name");
+  //   let cards = document.querySelectorAll(".card");
   
-    //loop through all elements
-    elements.forEach((element, index) => {
-      //check if text includes the search value
-      if (element.innerText.includes(searchInput.toUpperCase())) {
-        //display matching card
-        cards[index].classList.remove("hide_cours");
-      } else {
-        //hide others
-        cards[index].classList.add("hide_cours");
-      }
-    });
-  });
+  //   //loop through all elements
+  //   elements.forEach((element, index) => {
+  //     //check if text includes the search value
+  //     if (element.innerText.includes(searchInput.toUpperCase())) {
+  //       //display matching card
+  //       cards[index].classList.remove("hide_cours");
+  //     } else {
+  //       //hide others
+  //       cards[index].classList.add("hide_cours");
+  //     }
+  //   });
+  // });
   
   //Initially display all products
   window.onload = () => {
