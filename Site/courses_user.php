@@ -21,11 +21,11 @@
           <input type="search" id="search-input" placeholder="Search.."/>
 
         <ul class="items-body-content">
-          <li class="fa fa-angle-right" onclick="filterProduct('all')"> ALL</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('JS')">JS</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('PHP')">PHP</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('CSS')">CSS</li>
-          <li class="fa fa-angle-right" onclick="filterProduct('HTML')">HTML</li>
+          <li class="" onclick="filterProduct('all')"> <span>All</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('JS')"><span>JS</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('PHP')"><span>PHP</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('CSS')"><span>CSS</span> <i class="fa fa-angle-right"></i></li>
+          <li class="" onclick="filterProduct('HTML')"><span>HTML</span> <i class="fa fa-angle-right"></i></li>
         </ul>
         <?php
         $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
