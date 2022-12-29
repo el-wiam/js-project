@@ -17,7 +17,7 @@
                 <a id="itemstyl" class="nav-link active " aria-current="page" href="home_user.php">Home</a>
               </li>
               <li class="nav-item" >
-                <a id="itemstyl" class="nav-link " href="test_courses.php">Courses</a>
+                <a id="itemstyl" class="nav-link " href="courses_user.php">Courses</a>
               </li>
               <li class="nav-item  " >
                 <a id="itemstyl" class="nav-link " href="#about">About</a>

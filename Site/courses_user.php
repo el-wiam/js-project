@@ -81,14 +81,20 @@ $res = mysqli_query($con, $req);
     container.appendChild(name);
     //price
     let d= document.createElement("div");
+    d.style.display="flex";
     let price = document.createElement("h6");
     price.innerText = i.price;
+    let span = document.createElement("span");
+    span.innerText = "$";
+    d.append(span);
     d.append(price);
     container.appendChild(d);
   
     card.appendChild(container);
     document.getElementById("products").appendChild(card);
   }
+  var elements = document.querySelectorAll(".card");
+
   
   //parameter passed from button (Parameter same as category)
   function filterProduct(value) {
@@ -104,7 +110,6 @@ $res = mysqli_query($con, $req);
     });
   
     //select all cards
-    var elements = document.querySelectorAll(".card");
     //loop through all cards
     elements.forEach((element) => {
       //display all cards on 'all' button click
@@ -151,9 +156,7 @@ $res = mysqli_query($con, $req);
   var elem = document.querySelector('input[type="range"]');
 
 var rangeValue = function(){
-    var elts = document.querySelectorAll(".card");
-  //   console.log(elts);
-  elts.forEach((element)=>{
+  elements.forEach((element)=>{
       element.childNodes.forEach((el)=>{
           el.childNodes.forEach((e)=>{
               e.childNodes.forEach((e2)=>{
