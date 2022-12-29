@@ -1,5 +1,10 @@
 
-
+<!DOCTYPE html>
+<html lang="en">
+  <?php
+    include("head.php");
+  ?>
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="container-fluid">
             <a class=" col-4 navbar-brand ms-5" href="home_user.php">
@@ -29,3 +34,6 @@
           </div>
         </div>
       </nav>
+
+
+

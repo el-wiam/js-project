@@ -1,6 +1,6 @@
-body{
+/* body{
   background-color: #ffffff;
-}
+} */
 #search-container {
   margin: 1em 0;
 }
@@ -42,7 +42,7 @@ body{
   grid-column-gap: 1.5em;
   padding: 2em 0;
 }
-.card {
+.autre {
   background-color: #ffffff;
   max-width: 18em;
   margin-top: 1em;
@@ -73,7 +73,7 @@ img {
     object-fit: contain;
     height: 10em;
   }
-  .card{
+  .autre{
     max-width: 10em;
     margin-top: 1em;
   }

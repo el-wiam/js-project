@@ -1,16 +1,8 @@
 <?php
     session_start();
     if(isset($_SESSION['user'])){
-?>
-<!DOCTYPE html>
-<html lang="en">
-<?php
-    include("head.php");
-    ?>
-<body>
-
-<?php
-  include("navbar.php");
+        
+  include("../header_footer/navbar.php");
   ?>
 
       <div class="card text-center test">
@@ -112,12 +104,10 @@
         <div class="swiper-button-prev swiper-navBtn"></div>
         <!-- <div class="swiper-pagination"></div> -->
     </div>
+
+
       <?php
-        include("footer.php");
-      ?>
-</body>
-</html>
-<?php
+        include("../header_footer/footer.php");
  } 
  else{
     header("location:../inscription.php");

@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="style/css/styl.css">
-    <title>LOG IN </title>
-</head>
+<?php
+    include("../header_footer/head.php");
+?>
 <body>
 <div class="row" id="inscri">
         <div class="col-lg-6 insc">
@@ -40,11 +34,5 @@
                 </div>
             </form>
         </div>
-
-    <!-- <form action="action_con.php" method="post">
-        <input type="text" name="con_user">
-        <input type="password" name="con_pass">
-        <input type="submit" name="submit">
-</form> -->
 </body>
 </html>

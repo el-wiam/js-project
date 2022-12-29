@@ -2,17 +2,9 @@
     session_start();
     if(isset($_SESSION['user'])){
       include("../connexion.php");
-?>
-<!DOCTYPE html>
-<html lang="en">
-<?php
-  include("head.php");
-?>
-    <link rel="stylesheet" href="../style/css/cours.css">
 
-<body>
-  <?php
-  include("navbar.php");
+      include("../header_footer/navbar.php");
+    
   ?>
 
       <!-- *************************************************************************** -->
@@ -28,8 +20,8 @@
           <li class="fa fa-angle-right" onclick="filterProduct('HTML')">HTML</li>
         </ul>
         <?php
-        $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
-        $row=mysqli_fetch_assoc($res_0);
+          $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
+          $row=mysqli_fetch_assoc($res_0);
         ?>
         <input type="range" value="24" min="1" max="<?=$row['max']?>" oninput="this.nextElementSibling.value = this.value">
         <output id="value_range">24</output>
@@ -38,10 +30,7 @@
         </div>
     </div>
 
-  <?php
-    include("footer.php");
 
-  ?> 
   <script>
 
 let products = {
@@ -64,7 +53,7 @@ $res = mysqli_query($con, $req);
     //Create Card
     let card = document.createElement("div");
     //Card should have category and should stay hidden initially
-    card.classList.add("card", i.category, "hide");
+    card.classList.add("card", i.category, "hide","autre");
     //image div
     let imgContainer = document.createElement("div");
     imgContainer.classList.add("image-container");
@@ -184,10 +173,9 @@ var rangeValue = function(){
     filterProduct("all");
   };
   </script>
-  </body>
+    <?php
+    include("../header_footer/footer.php");
 
-</html>
-<?php
  } 
  else{
     header("location:../inscription.php");
