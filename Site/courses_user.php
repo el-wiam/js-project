@@ -27,10 +27,12 @@
           <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
-        <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <?php
+        $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
+        $row=mysqli_fetch_assoc($res_0);
+        ?>
+        <input type="range" value="24" min="1" max="<?=$row['max']?>" oninput="this.nextElementSibling.value = this.value">
         <output id="value_range">24</output>
-        
-     
       </div>
         <div class="col-lg-8" id="products">          
         </div>
