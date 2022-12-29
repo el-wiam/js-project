@@ -1,8 +1,9 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid row" >
-            <a class=" col-4 navbar-brand ms-5" href="home_user.php">
-                <h3 class="titl" >  Welcome back </h3>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="home_user.php">
+                <h3 class="titl">  Welcome back  <?= $_SESSION['username']?></h3>
               </a>
                  <!-- Fach kansaghro la fenetre wla f telephone ghadi tla3 dik l3iba dyal l menu f jenb -->
                  <button class=" col-1 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
