@@ -141,30 +141,30 @@ $res = mysqli_query($con, $req);
   }
 
 
-  var elem = document.querySelector('input[type="range"]');
+  // var elem = document.querySelector('input[type="range"]');
 
 
-  var rangeValue = function(){
-      // var elts = document.querySelectorAll(".card");
+  // var rangeValue = function(){
+  //     // var elts = document.querySelectorAll(".card");
 
-      elements.forEach((element)=>{
-        element.childNodes.forEach((el)=>{
-            el.childNodes.forEach((e)=>{
-              console.log(e);
-                e.childNodes.forEach((e2)=>{
-                    if(e2.textContent<elem.value){
-                        element.classList.remove("hide_cours");
-                    }
-                    else{
-                        element.classList.add("hide_cours");
-                    }
-                })
-            })
-        })
-      });
-    }
+  //     elements.forEach((element)=>{
+  //       element.childNodes.forEach((el)=>{
+  //           el.childNodes.forEach((e)=>{
+  //             console.log(e);
+  //               e.childNodes.forEach((e2)=>{
+  //                   if(e2.textContent<elem.value){
+  //                       element.classList.remove("hide_cours");
+  //                   }
+  //                   else{
+  //                       element.classList.add("hide_cours");
+  //                   }
+  //               })
+  //           })
+  //       })
+  //     });
+  //   }
 
-        elem.addEventListener("input", rangeValue);
+  //       elem.addEventListener("input", rangeValue);
 
 
 
