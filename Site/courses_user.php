@@ -20,7 +20,7 @@
       <div class="col-lg-4" id="search-container">
       <input
           type="search" id="search-input" placeholder="Search.."/>
-        <button id="search" >Search</button>
+        <!-- <button id="search" >Search</button> -->
         <ul class="buttons">
           <li class="button-value" onclick="filterProduct('all')"> ALL</li>
           <li class="button-value" onclick="filterProduct('JS')">JS</li>
@@ -28,6 +28,9 @@
           <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
+
+        <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <output id="value_range">24</output>
       </div>
         <div class="col-lg-8" id="products">
               <!-- // $req="SELECT * FROM cours";
@@ -136,9 +139,42 @@ $res = mysqli_query($con, $req);
       }
     });
   }
+
+
+  var elem = document.querySelector('input[type="range"]');
+
+
+  var rangeValue = function(){
+      // var elts = document.querySelectorAll(".card");
+
+      elements.forEach((element)=>{
+        element.childNodes.forEach((el)=>{
+            el.childNodes.forEach((e)=>{
+              console.log(e);
+                e.childNodes.forEach((e2)=>{
+                    if(e2.textContent<elem.value){
+                        element.classList.remove("hide_cours");
+                    }
+                    else{
+                        element.classList.add("hide_cours");
+                    }
+                })
+            })
+        })
+      });
+    }
+
+        elem.addEventListener("input", rangeValue);
+
+
+
+
+
+
+
   
   //Search button click
-  document.getElementById("search").addEventListener("click", () => {
+  document.getElementById("search-input").addEventListener("keyup", () => {
     //initializations
     let searchInput = document.getElementById("search-input").value;
     let elements = document.querySelectorAll(".product-name");
