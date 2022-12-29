@@ -18,8 +18,8 @@
       <!-- *************************************************************************** -->
       <div class="container row">
       <div class="col-lg-4" id="search-container">
-      <input
-          type="search" id="search-input" placeholder="Search.."/>
+        <!-- <div id="search-input"></div> -->
+      <input type="search" id="search-input" placeholder="Search.."/>
         <!-- <button id="search" >Search</button> -->
         <ul class="buttons">
           <li class="button-value" onclick="filterProduct('all')"> ALL</li>
@@ -29,8 +29,8 @@
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
 
-        <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-        <output id="value_range">24</output>
+        <!-- <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <output id="value_range">24</output> -->
       </div>
         <div class="col-lg-8" id="products">
               <!-- // $req="SELECT * FROM cours";
