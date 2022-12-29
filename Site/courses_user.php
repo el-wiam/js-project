@@ -9,11 +9,7 @@
   include("head.php");
 ?>
     <link rel="stylesheet" href="../style/css/cours.css">
-<style>
-      .hide_cours {
-  display: none;
-}
-</style>
+
 <body>
   <?php
   include("navbar.php");
@@ -31,7 +27,8 @@
           <li class="button-value" onclick="filterProduct('CSS')">CSS</li>
           <li class="button-value" onclick="filterProduct('HTML')">HTML</li>
         </ul>
-        
+        <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <output id="value_range">24</output>
         
      
       </div>
@@ -151,29 +148,29 @@ $res = mysqli_query($con, $req);
   });
 
 
-//   var elem = document.querySelector('input[type="range"]');
+  var elem = document.querySelector('input[type="range"]');
 
-// var rangeValue = function(){
-//     var elts = document.querySelectorAll(".card");
-//   //   console.log(elts);
-//   elements.forEach((element)=>{
-//       element.childNodes.forEach((el)=>{
-//           el.childNodes.forEach((e)=>{
-//               e.childNodes.forEach((e2)=>{
-//                   e2.childNodes.forEach((e3)=>{
-//                       // console.log(e3);
-//                       if(e3.textContent<elem.value){
-//                           element.classList.remove("hide_cours");
-//                       }
-//                       else{
-//                           element.classList.add("hide_cours");
-//                       }
-//                   });
-//               })
-//           })
-//       })
-//     });
-//   }
+var rangeValue = function(){
+    var elts = document.querySelectorAll(".card");
+  //   console.log(elts);
+  elts.forEach((element)=>{
+      element.childNodes.forEach((el)=>{
+          el.childNodes.forEach((e)=>{
+              e.childNodes.forEach((e2)=>{
+                  e2.childNodes.forEach((e3)=>{
+                      // console.log(e3);
+                      if(e3.textContent<elem.value){
+                          element.classList.remove("hide_cours");
+                      }
+                      else{
+                          element.classList.add("hide_cours");
+                      }
+                  });
+              })
+          })
+      })
+    });
+  }
 
       elem.addEventListener("input", rangeValue);
   
