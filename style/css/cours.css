@@ -41,7 +41,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-column-gap: 1.5em;
-  padding: 2em 0;
+  padding: 2em;
 }
 .autre {
   background-color: #ffffff;
