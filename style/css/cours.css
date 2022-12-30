@@ -117,7 +117,7 @@
 .autre {
   background-color: #ffffff;
   max-width: 18em;
-  margin-top: 1em;
+  margin-top: 2%;
   padding: 1em;
   border-radius: 5px;
   box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
@@ -153,4 +153,7 @@ img {
     grid-template-columns: auto auto;
     grid-column-gap: 1em;
   }
+}
+.tout-container{
+  max-width: 100%;
 }

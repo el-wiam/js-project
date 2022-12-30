@@ -19,7 +19,6 @@
           <li class="items-content" onclick="filterProduct('PHP')"><span>PHP</span> <i class="fa fa-angle-right"></i></li>
           <li class="items-content" onclick="filterProduct('CSS')"><span>CSS</span> <i class="fa fa-angle-right"></i></li>
           <li class="items-content" onclick="filterProduct('HTML')"><span>HTML</span> <i class="fa fa-angle-right"></i></li>
-          <li class="items-content" onclick="filterProduct('HTML')"><span>HTML</span> <i class="fa fa-angle-right"></i></li>
         </ul>
         <?php
           $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
