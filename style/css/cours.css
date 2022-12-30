@@ -113,6 +113,8 @@
   grid-template-columns: auto auto auto;
   grid-column-gap: 1.5em;
   padding: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .autre {
   background-color: #ffffff;
@@ -156,4 +158,6 @@ img {
 }
 .tout-container{
   max-width: 100%;
+  margin-left: auto;
+
 }
