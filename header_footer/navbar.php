@@ -32,7 +32,7 @@
                 <a id="itemstyl" class="nav-link " href="#about">About</a>
               </li>
               <li class="nav-item  " >
-                <a id="itemstyl" class="nav-link " href="deconnexion.php">deconnexion</a>
+                <a id="itemstyl" class="nav-link " href="../Site/deconnexion.php">deconnexion</a>
               </li>
             </ul>
           </div>
