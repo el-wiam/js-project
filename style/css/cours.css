@@ -78,7 +78,7 @@
   padding-right: 0px;
   margin: 5px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 10px;
   border: 1px solid transparent;
   cursor: pointer;
@@ -89,6 +89,7 @@
   color:#112a42 ;
 }
 #select{
+   padding: 5px;
     background-color: #ffffff;
     margin: 10px;
     width: 90%;
