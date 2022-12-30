@@ -96,13 +96,19 @@ for (let i of products.data) {
 
     slide.appendChild(card_wrapper);
   }
+  let next = document.createElement("div");
+  next.classList("swiper-button-next","swiper-navBtn");
+  let prev = document.createElement("div");
+  prev.classList("swiper-button-prev","swiper-navBtn");
+
+
   document.getElementById("about").append(slide);
 console.log( document.getElementById("about"));
     
 </script>
 
-<div class="swiper-button-next swiper-navBtn"></div>
-<div class="swiper-button-prev swiper-navBtn"></div>
+<!-- <div class="swiper-button-next swiper-navBtn"></div>
+<div class="swiper-button-prev swiper-navBtn"></div> -->
 
 
 <?php
