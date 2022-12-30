@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
                     $_SESSION['username']=$row['username'];
                         if($row['admin']==true){
                             $_SESSION['admin'] = true;
+                            $_SESSION['user']=false;
                         }
                         header("location:../Site/home_user.php");
                     }

@@ -72,11 +72,9 @@
 }
 .items-modali{
   background-color: #112a42;
-  height: 50px;
-  width: 50%;
-  padding: 10px;
-  padding-right: 0px;
-  margin: 5px;
+  height: 3em;
+  width: 66%;
+  margin: 2em;
   color: #ffffff;
   font-size: 17px;
   border-radius: 10px;
@@ -155,4 +153,8 @@ img {
     grid-template-columns: auto auto;
     grid-column-gap: 1em;
   }
+}
+
+.tous-container{
+  max-width: 100%;
 }
