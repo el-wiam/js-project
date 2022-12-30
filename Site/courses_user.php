@@ -5,8 +5,13 @@
       include("../header_footer/navbar.php");
       ?>
       <!-- *************************************************************************** -->
-      <div class="container row tous-container">
+<<<<<<< HEAD
+      <div class="container row tout-container">
       <div class="col-lg-4 " id="search-container">
+=======
+      <div class="container row">
+      <div class="col-lg-3 " id="search-container">
+>>>>>>> f6fcb4158266bf1e1b7813c093d2c9c01da3a77e
           <input type="search" id="search-input" placeholder="Search.."/>
           <div class="items-head">
             <p>Categories</p>
