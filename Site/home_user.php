@@ -42,13 +42,15 @@
             ?>
     ],
 };
+var slide = document.createElement("div");
+slide.classList.add("slide-content");
 for (let i of products.data) {
     //console.log(i.productName)
     //Create Card
-    let slide = document.createElement("div");
+    
     //Card should have category and should stay hidden initially
-    slide.classList.add("slide-content", i.category);
-
+    //
+    //console.log(i.category);
     let card_wrapper=document.createElement("div");
     card_wrapper.classList.add("card-wrapper","swiper-wrapper");
 
@@ -74,7 +76,7 @@ for (let i of products.data) {
     let description=document.createElement("p");
     description.classList.add("description");
     description.innerText = i.productName;
-
+    
     let span=document.createElement("span");
     span.classList.add("span-font");
     span.innerText = i.price;
@@ -82,7 +84,6 @@ for (let i of products.data) {
 
     card_content.appendChild(span);
     card_content.appendChild(description);
-
     card_img.appendChild(img);
 
     image_content.appendChild(card_img);
@@ -90,22 +91,23 @@ for (let i of products.data) {
 
     swiper_slide.appendChild(image_content);
     swiper_slide.appendChild(card_content);
-
+    
     card_wrapper.appendChild(swiper_slide)
 
     slide.appendChild(card_wrapper);
-
-    document.getElementById("about").appendChild(slide);
-
   }
+  document.getElementById("about").append(slide);
 console.log( document.getElementById("about"));
     
 </script>
+
+<div class="swiper-button-next swiper-navBtn"></div>
+<div class="swiper-button-prev swiper-navBtn"></div>
 
 
 <?php
         include("../header_footer/footer.php");
  } 
  else{
-    header("location:../inscription.php");
+    header("location:../style_forms/inscription.php");
  }

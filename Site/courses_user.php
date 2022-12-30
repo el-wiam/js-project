@@ -4,9 +4,7 @@
       include("../style_forms/connexion.php");
 
       include("../header_footer/navbar.php");
-    
-  ?>
-
+      ?>
       <!-- *************************************************************************** -->
       <div class="container row">
       <div class="col-lg-4 " id="search-container">
@@ -175,5 +173,5 @@ var rangeValue = function(){
 
  } 
  else{
-    header("location:../inscription.php");
+    header("location:../style_forms/inscription.php");
  }

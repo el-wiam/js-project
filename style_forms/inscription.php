@@ -57,7 +57,7 @@ require("connexion.php");
                 <a  class="col-5 btn  btn-block btnnl"href="./authentification.php">Sign IN</a> 
         </div>
     </div>
-        <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-        <script src="style/js/script.js"></script>
+        <script src="../bootstrap/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+        <script src="../style/js/script.js"></script>
 </body>
 </html>
