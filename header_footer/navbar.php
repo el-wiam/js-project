@@ -4,6 +4,10 @@
   <?php
     include("head.php");
   ?>
+  <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/fontawesome-free-6.2.1-web/css/all.min.css">
+  <link rel="stylesheet" href="../style/css/style.css">
+  <link rel="stylesheet" href="../style/css/style_formulaire.css">
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light row">
         <div class="container-fluid">
