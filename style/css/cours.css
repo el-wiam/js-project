@@ -3,8 +3,6 @@
 } */
 #search-container {
   margin: 1em;
-  width: 25%;
-  height: 100%;
   background-color:#ffffff;
   display: grid;
   place-items: center;
