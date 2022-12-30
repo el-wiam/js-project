@@ -2,7 +2,7 @@
 
     session_start();
     if(isset($_SESSION['user'])){
-        include("../connexion.php");
+        include("../style_forms/connexion.php");
         include("../header_footer/navbar.php");
   ?>
 
