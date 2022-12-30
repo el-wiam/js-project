@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    include("../jsprojet/header_footer/head.php");
+    include("../header_footer/head.php");
 ?>
 <body>
 <div class="row" id="inscri">
@@ -30,7 +30,7 @@
                 </div>
     
                 <div class=" row mt-3">
-                    <button  type="submit" id="myBtn" name="submit" class="col-5 btn btn-success  btn-block btnn"> LOG IN</button>
+                    <button  type="submit" id="myBtn" name="submit" class="col-5 btn btn-success  btn-block btnn" href="./authentification.php"> LOG IN</button>
                 </div>
             </form>
         </div>

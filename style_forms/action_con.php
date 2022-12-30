@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
                         if($row['admin']==true){
                             $_SESSION['admin'] = true;
                         }
-                        header("location:site/home_user.php");
+                        header("location:../site/home_user.php");
                     }
                     else{
                         header("location:inscription.php");
