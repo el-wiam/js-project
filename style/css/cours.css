@@ -2,36 +2,108 @@
   background-color: #ffffff;
 } */
 #search-container {
-  margin: 1em 0;
-  background-color: rgb(45, 48, 193);
+  margin: 1em;
+  width: 25%;
+  height: 100%;
+  background-color:#ffffff;
+  display: grid;
+  place-items: center;
 }
-#search-container input {
-  background-color: transparent;
-  width: 40%;
-  border-bottom: 2px solid #110f29;
-  padding: 1em 0.3em;
-}
+ #search-container input {
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 10px;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid #112a42;
+    height: 40px;
+} 
+/* #search-container  */
 
-#search-container input:focus {
-  border-bottom-color: #6759ff;
-}
-
-#search-container button {
+/* #search-container button {
   padding: 1em 2em;
   margin-left: 4em;
-  /* background-color: #6759ff; */
+  /* background-color: #6759ff; 
   color: black;
   border-radius: 5px;
   margin-top: 0.5em;
+} */
+.items-head p{
+  padding: 5px 20px;
+  margin: 10px;
+  color: #05335e;
+  font-weight: bold;
+  font-size: 20px;
 }
-.button-value {
-  /* border: 2px solid #6759ff; */
+.items-head hr {
+  width: 30%;
+  margin: 0px 30px;
+  border: 1px solid #112a42;
+}
+.items{
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-gap: 10px;
+}
+.items-content{
+  width: 100%;
+  padding: 10px;
+  padding-right: 0px;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  /* background-color: lightblue; */
+  font-size: 17px;
+  grid-gap: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.items-content:hover {
+  border-radius: 15px;
+  border: 1px solid #112a42;
+}
+.items-content i {
+  align-self: center;
+  font-size: 15px;
+  color: #112a42;
+  font-weight: bold;
+  animation: icon 1.5s infinite forwards;
+}
+.items-modali{
+  background-color: #112a42;
+  height: 50px;
+  width: 50%;
+  padding: 10px;
+  padding-right: 0px;
+  margin: 5px;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.items-modali:hover{
+  background-color: #ffffff;
+  border: 2px solid #112a42 ;
+  color:#112a42 ;
+}
+#select{
+    background-color: #ffffff;
+    margin: 10px;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid #112a42;
+    height: 40px;
+}
+/* .button-value {
+  /* border: 2px solid #6759ff; 
   padding: 1em 2.2em;
-  /* border-radius: 3em; */
+  /* border-radius: 3em; 
   background-color: transparent;
   color: #6759ff;
   cursor: pointer;
-}
+} */
 .active_cours {
   /* background-color: red; */
   border-bottom: 2px solid red;

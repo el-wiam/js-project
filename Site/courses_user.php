@@ -2,27 +2,69 @@
     session_start();
     if(isset($_SESSION['user'])){
       include("../style_forms/connexion.php");
-
       include("../header_footer/navbar.php");
       ?>
       <!-- *************************************************************************** -->
       <div class="container row">
       <div class="col-lg-4 " id="search-container">
           <input type="search" id="search-input" placeholder="Search.."/>
-
-        <ul class="items-body-content">
-          <li class="" onclick="filterProduct('all')"> <span>All</span> <i class="fa fa-angle-right"></i></li>
-          <li class="" onclick="filterProduct('JS')"><span>JS</span> <i class="fa fa-angle-right"></i></li>
-          <li class="" onclick="filterProduct('PHP')"><span>PHP</span> <i class="fa fa-angle-right"></i></li>
-          <li class="" onclick="filterProduct('CSS')"><span>CSS</span> <i class="fa fa-angle-right"></i></li>
-          <li class="" onclick="filterProduct('HTML')"><span>HTML</span> <i class="fa fa-angle-right"></i></li>
+          <div class="items-head">
+            <p>Categories</p>
+            <hr>
+         </div>
+        <ul class="items">
+          <li class="items-content" onclick="filterProduct('all')"> <span>All</span> <i class="fa fa-angle-right"></i></li>
+          <li class="items-content" onclick="filterProduct('JS')"><span>JS</span> <i class="fa fa-angle-right"></i></li>
+          <li class="items-content" onclick="filterProduct('PHP')"><span>PHP</span> <i class="fa fa-angle-right"></i></li>
+          <li class="items-content" onclick="filterProduct('CSS')"><span>CSS</span> <i class="fa fa-angle-right"></i></li>
+          <li class="items-content" onclick="filterProduct('HTML')"><span>HTML</span> <i class="fa fa-angle-right"></i></li>
         </ul>
         <?php
           $res_0 = mysqli_query($con, "SELECT MAX(price) as max FROM `cours`");
           $row=mysqli_fetch_assoc($res_0);
         ?>
         <input type="range" value="24" min="1" max="<?=$row['max']?>" oninput="this.nextElementSibling.value = this.value">
-        <output id="value_range">24</output>
+        <output id="value_range">24</output> <br>
+        <?php
+                if(isset($_SESSION['admin'])){
+                    ?>
+                      <button type="button" class="items-modali" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">add an item</button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">add a new item to your store</h5>
+                            </div>
+                            <div class="modal-body">
+                            <form action="ajouter.php" method="post" enctype="multipart/form-data">
+                                  <label for="img">image:</label>
+                                  <input type="file" name="img">
+                                  <label for="description">description:</label>
+                                  <input type="text" name="description">
+                                  <label for="categories">categorie:</label>
+                                      <select id="select" name="categories">
+                                          <option value="HTML">HTML</option>
+                                          <option value="PHP">PHP</option>
+                                          <option value="CSS">CSS</option>
+                                          <option value="JS">JS</option>
+                                          <option value="JQUERY">JQUERY</option>
+                                      </select><br>
+                                      <label for="price">price:</label>
+                                  <input type="number" name="price">
+                                  <input type="submit"  value="ADD item" name="submit">
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="items-modali" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+<?php
+                }
+              ?>
+
       </div>
         <div class="col-lg-8" id="products">          
         </div>
