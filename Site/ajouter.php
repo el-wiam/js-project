@@ -1,5 +1,5 @@
 <?php
-include("../connexion.php");
+include("../style_forms/connexion.php");
 if(isset($_POST['submit'])){
     $description=$_POST['description'];
     $price=$_POST['price'];

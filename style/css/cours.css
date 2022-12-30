@@ -10,6 +10,8 @@
   place-items: center;
 }
  #search-container input {
+    background-color: #ffffff;
+    padding: 5px;
     margin: 10px;
     width: 90%;
     border-radius: 10px;
@@ -70,6 +72,7 @@
 }
 .items-modali{
   background-color: #112a42;
+  height: 50px;
   width: 50%;
   padding: 10px;
   padding-right: 0px;
@@ -84,6 +87,14 @@
   background-color: #ffffff;
   border: 2px solid #112a42 ;
   color:#112a42 ;
+}
+#select{
+    background-color: #ffffff;
+    margin: 10px;
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid #112a42;
+    height: 40px;
 }
 /* .button-value {
   /* border: 2px solid #6759ff; 
