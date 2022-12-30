@@ -2,8 +2,8 @@
     session_start();
     if(isset($_SESSION['user'])){
       include("../style_forms/connexion.php");
-
       include("../header_footer/navbar.php");
+      include("../header_footer/footer.php");
     
   ?>
 
