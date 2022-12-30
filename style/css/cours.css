@@ -72,7 +72,7 @@
 }
 .items-modali{
   background-color: #112a42;
-  height: 50px;
+  height: 100%;
   width: 50%;
   padding: 10px;
   padding-right: 0px;
@@ -89,7 +89,7 @@
   color:#112a42 ;
 }
 #select{
-   padding: 5px;
+    padding: 5px;
     background-color: #ffffff;
     margin: 10px;
     width: 90%;
@@ -105,11 +105,11 @@
   color: #6759ff;
   cursor: pointer;
 } */
-.active_cours {
-  /* background-color: red; */
+/*.active_cours {
+   background-color: red; 
   border-bottom: 2px solid red;
   color: black;
-}
+}*/
 #products {
   display: grid;
   grid-template-columns: auto auto auto;
