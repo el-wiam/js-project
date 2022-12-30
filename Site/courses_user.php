@@ -6,20 +6,26 @@
       ?>
       <!-- *************************************************************************** -->
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div class="container row ">
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> f07dae9f109b760c37231ca22e1821707212c910
       <div class="container row tout-container">
-=======
+
       <div class="container row ">
+<<<<<<< HEAD
 >>>>>>> 2db2241fe3c5566db0bb766c73dcdc0914cb9f34
 >>>>>>> 743898bf9c949c7171b4052fa84153ecdbc84d9c
-      <div class="col-lg-4 " id="search-container">
 =======
+
+>>>>>>> f07dae9f109b760c37231ca22e1821707212c910
+      <div class="col-lg-4 " id="search-container">
+
       <div class="container row">
       <div class="col-lg-3 " id="search-container">
->>>>>>> f6fcb4158266bf1e1b7813c093d2c9c01da3a77e
           <input type="search" id="search-input" placeholder="Search.."/>
           <div class="items-head">
             <p>Categories</p>
