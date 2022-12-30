@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    include("../header_footer/head.php");
+    include("../jsprojet/header_footer/head.php");
 ?>
 <body>
 <div class="row" id="inscri">
