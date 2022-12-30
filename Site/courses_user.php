@@ -5,7 +5,7 @@
       include("../header_footer/navbar.php");
       ?>
       <!-- *************************************************************************** -->
-      <div class="container row ">
+      <div class="container row">
       <div class="col-lg-4 " id="search-container">
           <input type="search" id="search-input" placeholder="Search.."/>
           <div class="items-head">
