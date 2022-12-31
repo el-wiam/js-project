@@ -1,15 +1,11 @@
-var swiper = new Swiper(".slide-content", {
+var swiper = new swiper(".swiper-slide", {
     slidesPerView: 3,
     spaceBetween: 25,
     loop: true,
     centerSlide: 'true',
     fade: 'true',
     grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
+  
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -27,3 +23,9 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
+
+    let next = document.createElement("div");
+  next.classList.add("swiper-button-next","swiper-navBtn");
+  let prev = document.createElement("div");
+  prev.classList.add("swiper-button-prev","swiper-navBtn");

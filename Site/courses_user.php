@@ -4,6 +4,11 @@
       include("../style_forms/connexion.php");
       include("../header_footer/navbar.php");
       ?>
+      <style>
+      body{
+    overflow-x:hidden;
+  }
+    </style>
       <!-- *************************************************************************** -->
       <div class="container row tout-container">
       <div class="container row">
