@@ -70,8 +70,9 @@
 }
 .items-modali{
   background-color: #112a42;
-  height: 100%;
-  width: 70%;
+  height: 3em;
+  width: 10em;
+  margin: 0.5em; 
   color: #ffffff;
   font-size: 17px;
   border-radius: 10px;
