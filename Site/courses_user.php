@@ -38,11 +38,11 @@
                             </div>
                             <div class="modal-body">
                             <form action="ajouter.php" method="post" enctype="multipart/form-data">
-                                  <label for="img">image:</label>
+                                  <label for="img">image:</label><br>
                                   <input type="file" name="img">
-                                  <label for="description">description:</label>
+                                  <label for="description">description:</label><br>
                                   <input type="text" name="description">
-                                  <label for="categories">categorie:</label>
+                                  <label for="categories">categorie:</label><br>
                                       <select id="select" name="categories">
                                           <option value="HTML">HTML</option>
                                           <option value="PHP">PHP</option>
@@ -50,7 +50,7 @@
                                           <option value="JS">JS</option>
                                           <option value="JQUERY">JQUERY</option>
                                       </select><br>
-                                      <label for="price">price:</label>
+                                      <label for="price">price:</label><br>
                                   <input type="number" name="price">
                                   <input type="submit"  value="ADD item" name="submit">
                               </form>
@@ -62,7 +62,7 @@
                         </div>
                       </div>
 
-<?php
+          <?php
                 }
               ?>
 
