@@ -51,7 +51,13 @@ h4{
     font-family: Georgia, 'Times New Roman', Times, serif;
     border: 2px solid #243b55;
 }
-
+.btn-style:hover{
+  background-color: #FFF;
+}
+.btn :hover{
+  background-color: #FFF;
+  color: #395c84;
+}
 
 #slash{
     color: #395c84;

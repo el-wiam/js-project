@@ -53,7 +53,7 @@
       </div>
     </div>
         <div class="btn-style-all">
-            <a href="courses_user.php" type="button" class="btn ">all courses</a>
+        <a href="courses_user.php" class="btn btn-style mt-4">All courses</a>
         </div>
     </div>
 
