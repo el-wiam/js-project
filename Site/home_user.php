@@ -4,6 +4,7 @@
     if(isset($_SESSION['user'])){
         include("../style_forms/connexion.php");
         include("../header_footer/navbar.php");
+        include("../header_footer/head.php")
   ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <style>
@@ -26,16 +27,16 @@
         <h1 class="text-center"> <span id="slash">/</span> Courses</h1>
     </div>
 
-    <div class="slider_container swiper mb-5" >
+    <div class="slider_container swiper m-5" >
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <?php
           $req=mysqli_query($con,"SELECT * FROM cours");
           while($test = mysqli_fetch_assoc($req)) {
 ?>
-              <div class="swiper-slide">
+              <div class="swiper-slide" >
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card"  style="width: 18rem; ">
                       <img src="<?=$test['img']?>" class="card-img-top" alt="...">
                       <div class="card-body">
                         <p class="card-text"><?=$test['description']?></p>
