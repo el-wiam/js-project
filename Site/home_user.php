@@ -30,7 +30,7 @@
 
     <div class="slider_container swiper m-5" >
     <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper style-wrapper">
         <?php
           $req=mysqli_query($con,"SELECT * FROM cours");
           while($test = mysqli_fetch_assoc($req)) {
