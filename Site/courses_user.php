@@ -59,7 +59,6 @@
                                   <input type="number" name="price"> 
                             </div>
                             <div class="modal-footer">
-                              <!-- <input type="submit" class="items-modali"  value="ADD item" name="submit">  -->
                               <button type="submit" class="items-modali" data-bs-dismiss="modal" name="submit">ADD</button>
                               <button type="button" class="items-modali" data-bs-dismiss="modal">Close</button>
                             </div></form>
