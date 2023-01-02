@@ -28,7 +28,7 @@
                 <a id="itemstyl" class="nav-link " href="#about">About</a>
               </li>
               <li class="nav-item  " >
-                <a id="itemstyl" class="nav-link " href="../style_forms/authentification.php">deconnexion</a>
+                <a id="itemstyl" class="nav-link " href="../style_forms/deconnexion.php">deconnexion</a>
               </li>
             </ul>
           </div>
