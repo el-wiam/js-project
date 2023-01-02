@@ -27,13 +27,14 @@
         <h1 class="text-center"> <span id="slash">/</span> Courses</h1>
     </div>
 
-    <div class="container row " >
+    <!-- <div class="container row " >
     <div class="col d-flex" id="WS">
 
     </div>
-    </div>
+    </div> -->
 
 
+    <div id="ws"></div>
 
     <script>
       let products = [
@@ -96,7 +97,7 @@
     card.append(div_p);
 
    
-    document.getElementById("WS").append(card);
+    document.getElementById("ws").append(card);
   }
 
   // var c=[products.data.floor(Math.random()*products.data.length),]
