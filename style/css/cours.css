@@ -101,8 +101,6 @@ img {
   object-fit:contain;
   width: 100%;
   height: 15em;
-  /* max-width: 100%; */
-  object-fit: contain;
   box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
 }
 .container {

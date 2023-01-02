@@ -27,50 +27,108 @@
         <h1 class="text-center"> <span id="slash">/</span> Courses</h1>
     </div>
 
+    <div class="container row " >
+    <div class="col d-flex" id="WS">
 
-    <div class="slider_container swiper m-5" >
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper style-wrapper">
-        <?php
-          $req=mysqli_query($con,"SELECT * FROM cours");
-          while($test = mysqli_fetch_assoc($req)) {
-?>
-              <div class="swiper-slide" >
+    </div>
+    </div>
 
-                    <div class="card"  style="width: 18rem; ">
-                      <img src="<?=$test['img']?>" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <p class="card-text"><?=$test['description']?></p>
-                      </div>
-                    </div>
-                    
-              </div>
-            <?php
+
+
+    <script>
+      let products = [
+   
+      <?php
+        $req = "select * from cours";
+        $res = mysqli_query($con, $req);
+          while ($row = mysqli_fetch_assoc($res)) {
+            echo ("{
+              productName: \"" . $row['description'] . "\",
+              category: \"" . strtoupper($row['categorie']) . "\",
+              price: \"" . $row['price'] . "\",
+              image: \"" . $row['img'] . "\",
+            },");
           }
-        ?>
-      </div>
-      <div class="swiper-navigation">
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div>
-      </div>
-    </div>
-        <div class="btn-style-all">
-        <a href="courses_user.php" class="btn btn-style mt-4">All courses</a>
-        </div>
-    </div>
+  ?> 
+    
+        ];
+
+        console.log(products);
+  // console.log(products.floor[Math.random()*products.length]);
+  console.log(products[Math.floor(Math.random()*products.length)]);
+  var c=[
+    products[Math.floor(Math.random()*products.length)],
+    products[Math.floor(Math.random()*products.length)],
+    products[Math.floor(Math.random()*products.length)]
+  ];
+
+  while(c[0]==c[1]){
+    c[1]=products[Math.floor(Math.random()*products.length)];
+  }
+  while(c[1]==c[2]){
+    c[1]=products[Math.floor(Math.random()*products.length)];
+  }
+  while(c[2]==c[0]){
+    c[1]=products[Math.floor(Math.random()*products.length)];
+  }
+
+  let i;
+  
+  for(i=0;i<3;i++){
+    // console.log(c[i].productName);
+
+    let card = document.createElement("div");
+    card.classList.add("card");
+
+    let img = document.createElement("img");
+    img.classList.add("card-img-top","img-modi");
+    img.src=c[i].image;
+
+    let div_p = document.createElement("div");
+    div_p.classList.add("card-body");
+
+    let para = document.createElement("p");
+    para.classList.add("card-text");
+    para.innerText = c[i].productName;
+
+    div_p.appendChild(para);
+    card.append(img);
+    card.append(div_p);
+
+   
+    document.getElementById("WS").append(card);
+  }
+
+  // var c=[products.data.floor(Math.random()*products.data.length),]
+    </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    navigation: {
-  nextEl: ".swiper-button-next",
-  prevEl: ".swiper-button-prev",
-},
-  });
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 <?php
         include("../header_footer/footer.php");
  } 
