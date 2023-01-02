@@ -188,13 +188,11 @@ $res = mysqli_query($con, $req);
 
 var rangeValue = function(){
     var elts = document.querySelectorAll(".card");
-  //   console.log(elts);
   elts.forEach((element)=>{
       element.childNodes.forEach((el)=>{
           el.childNodes.forEach((e)=>{
               e.childNodes.forEach((e2)=>{
                   e2.childNodes.forEach((e3)=>{
-                      // console.log(e3);
                       if(e3.textContent<elem.value){
                           element.classList.remove("hide_cours");
                       }
