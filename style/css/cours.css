@@ -1,8 +1,4 @@
-/* body{
-  background-color: #ffffff;
-} */
 #search-container {
-  /* margin: 1em; */
   background-color:#ffffff;
   display: grid;
   place-items: center;
@@ -16,16 +12,6 @@
     border: 2px solid #112a42;
     height: 40px;
 } 
-/* #search-container  */
-
-/* #search-container button {
-  padding: 1em 2em;
-  margin-left: 4em;
-  /* background-color: #6759ff; 
-  color: black;
-  border-radius: 5px;
-  margin-top: 0.5em;
-} */
 .items-head p{
   padding: 5px 20px;
   margin: 10px;
@@ -92,19 +78,6 @@
     border: 2px solid #112a42;
     height: 40px;
 }
-/* .button-value {
-  /* border: 2px solid #6759ff; 
-  padding: 1em 2.2em;
-  /* border-radius: 3em; 
-  background-color: transparent;
-  color: #6759ff;
-  cursor: pointer;
-} */
-/*.active_cours {
-   background-color: red; 
-  border-bottom: 2px solid red;
-  color: black;
-} */
 #products {
   display: grid;
   grid-template-columns: auto auto auto;

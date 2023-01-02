@@ -7,14 +7,10 @@
 }
 body{
     width: 100%;
-   /* background-image: url("../../Site/images/back5.webp") ; */
-   /* background-color: rgb(240, 217, 191); */
    background: #f6f5f7;
    background-size: cover;
   }
   #inscri{
-    /* background-color: rgb(252, 233, 209);
-    border: 2px bisque solid; */
     box-shadow: 0 0 2em rgba(160, 160, 162, 0.927);
     border-radius: 2%;
     width: 80%;

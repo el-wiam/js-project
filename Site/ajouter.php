@@ -14,19 +14,14 @@ if(isset($_POST['submit'])){
     $res=mysqli_query($con,$req);
 
     if($res ){
-        // if(!empty($img) && !empty($description) && !empty($categories_select) && !empty($price))
-        // header("location:ajouter_cours.php");
-    echo $upload;
-
-        // $_SESSION['status']='inserted succesful';
+        if(!empty($img) && !empty($description) && !empty($categories_select) && !empty($price))
+        header("location:ajouter_cours.php");
     }
     else{
-        echo "erreur";
-        // header("location:google.com");
-        
-        // <script type="text/javascript"> alert("erreur d'ajout");window.location="ajouter_cours.php"; <script/>
-        
-        // $_SESSION['status']="not inserted";
+        header("location:google.com");
+        ?>
+        <script type="text/javascript"> alert("erreur d'ajout");window.location="ajouter_cours.php"; <script/>
+    <?php
     }
 }
 ?>
